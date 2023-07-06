@@ -1,0 +1,64 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  {% unless site.plugins contains "jekyll-seo-tag" %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {% if page.description %}
+      <meta name="Description" content="{{ page.description }}">
+    {% endif %}
+  {% endunless %}
+
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <!-- <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}"> -->
+  <script>
+    window.cookie = {
+      "get": function (key, defaultValue = null) {
+        var allCookies = document.cookie.split(";");
+        for (var i = 0; i < allCookies.length; ++i) {
+          var keyValue = allCookies[i].trim().split("=", 2).map(decodeURIComponent);
+          if (keyValue[0] == key) return keyValue[1] || "";
+        }
+        return defaultValue;
+      },
+      "set": function (key, value, exdays = 365) {
+        if (!key) return;
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value)
+          + ";expires=" + d.toUTCString()
+          + ";path=/"
+          + ";samesite=strict";
+      },
+      "del": function (key) { window.cookie.set(key, "", -1); },
+      "has": function (key) { return window.cookie.get(key) != null; }
+    };
+    document.write(`<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-' | relative_url }}${cookie.get("userColorPreference", "default")}.css">`);
+  </script>
+
+  {% if site.ga_tracking != nil %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.ga_tracking }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
+    </script>
+
+  {% endif %}
+
+  {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  {% include head_custom.html %}
+
+</head>

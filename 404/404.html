@@ -1,0 +1,402 @@
+---
+layout: default
+title: 404
+permalink: /404
+nav_exclude: true
+search_exclude: true
+---
+
+<script src="https://unpkg.com/three@0.136.0/build/three.js"></script>
+<script src="https://unpkg.com/three@0.136.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://unpkg.com/three@0.136.0/examples/js/geometries/TextGeometry.js"></script>
+<script src="https://unpkg.com/three@0.136.0/examples/js/math/MeshSurfaceSampler.js"></script>
+<script src="https://unpkg.com/three@0.136.0/examples/js/misc/GPUComputationRenderer.js"></script>
+<style>
+    #canvas-404,
+    .h1-404 {
+        display: block;
+        width: 100%;
+        font-size: 25vw;
+        font-size: min(25vh, 25vw);
+        text-align: center;
+        margin: 0;
+    }
+</style>
+
+<h1>Page Not Found</h1>
+
+<script>
+(function() {
+    var onThemeChangeCbs = [];
+    jtd._setTheme = jtd.setTheme;
+    jtd.setTheme = function(theme) {
+        jtd._setTheme(theme);
+        for (var i = 0; i < onThemeChangeCbs.length; ++i) {
+            onThemeChangeCbs[i]();
+        }
+    };
+    jtd.onThemeChange = function(cb) {
+        onThemeChangeCbs.push(cb);
+    };
+})();
+</script>
+
+<!--
+TODO:
+* Turn on gravity sensing on all devices (especially iOS).
+* Resets the camera's position in a spring effect after the mouse moves out of the canvas.
+* Change the color calculation formula, when the theme is in light, reduce the color saturation (add some blue/yellow/red).
+* Add a boundary, so that particles can bounce after touching the boundary.
+* Improve webgl compatibility, and also have reasonable display in devices that cannot run webgl2/webgl1 without float/webgl1.
+* Customize the computation process of GPGPU to use vertex shaders instead of fragment shaders for parallel computation in webgl2 capable devices.
+* Added Asymmetric Projection special effects. Randomly chooses whether to use the current particle effect or the newly added feature when the user enters the page.
+-->
+
+<script>
+window.onload = async () => { try {
+    const fboWidth = 512, fboHeight = 512;
+    const NumOfParticles = fboWidth * fboHeight;
+    const MAX_COLLIDERS = 1;
+    const colliders = new Float32Array(MAX_COLLIDERS * 4);
+    let canvas = document.getElementById("canvas-404");
+    let renderer = window.renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true, });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.sortObjects = false;
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(50, canvas.clientWidth / canvas.clientHeight, 1, 1024);
+    camera.position.z = 2;
+    camera.lookAt(scene.position);
+    scene.add(camera);
+    const fontLoader = new THREE.FontLoader();
+    const font = await new Promise(s => {
+        fontLoader.load("https://unpkg.com/three@0.136.0/examples/fonts/helvetiker_bold.typeface.json", s);
+    });
+    let textGeo = new THREE.TextGeometry("404", { font, size: 1.0, height: 0.25, });
+    textGeo.computeBoundingBox();
+    let bounds = textGeo.boundingBox;
+    textGeo.translate(
+        (bounds.max.x - bounds.min.x) * -0.5,
+        (bounds.max.y - bounds.min.y) * -0.5,
+        (bounds.max.z - bounds.min.z) * -0.5
+    );
+
+    let gpuCompute = new THREE.GPUComputationRenderer(fboWidth, fboHeight, renderer);
+    const dtPosition = gpuCompute.createTexture(),
+        dtVelocity = gpuCompute.createTexture(),
+        originTex = gpuCompute.createTexture();
+
+    let tMesh = new THREE.Points(textGeo, new THREE.PointsMaterial());
+    const sampler = new THREE.MeshSurfaceSampler(tMesh).setWeightAttribute(null).build();
+    let n = new THREE.Vector3(),
+        posData = dtPosition.image.data,
+        velData = dtVelocity.image.data,
+        oriData = originTex.image.data;
+    for (let i = 0, j = 0, rand = Math.random; i < NumOfParticles; ++i, j += 4) {
+        let p = new THREE.Vector3();
+        sampler.sample(p, n);
+        posData[j + 0] = oriData[j + 0] = p.x;
+        posData[j + 1] = oriData[j + 1] = p.y;
+        posData[j + 2] = oriData[j + 2] = p.z;
+        posData[j + 3] = oriData[j + 3] = 0.0;
+        velData[j + 0] = (rand() - 0.5) * 0.004;
+        velData[j + 1] = (rand() - 0.5) * 0.004;
+        velData[j + 2] = (rand() - 0.5) * 0.004;
+        velData[j + 3] = rand();
+    }
+    tMesh.material.dispose();
+    tMesh.geometry.dispose();
+    tMesh = null;
+
+    let positionVariable = gpuCompute.addVariable("texturePosition", `{% include_relative fboPosition.frag %}`, dtPosition);
+    let velocityVariable = gpuCompute.addVariable("textureVelocity", `{% include_relative fboVelocity.frag %}`, dtVelocity);
+    gpuCompute.setVariableDependencies(positionVariable, [positionVariable, velocityVariable]);
+    gpuCompute.setVariableDependencies(velocityVariable, [positionVariable, velocityVariable]);
+    positionVariable.material.defines.MAX_COLLIDERS = MAX_COLLIDERS;
+    velocityVariable.material.defines.MAX_COLLIDERS = MAX_COLLIDERS;
+    let positionUniforms = positionVariable.material.uniforms;
+        velocityUniforms = velocityVariable.material.uniforms;
+    Object.entries({
+        time: {value: 0.0},
+        origin: {value: originTex},
+        colliders: { value: colliders },
+    }).forEach(([k, v]) => positionUniforms[k] = v);
+    Object.entries({
+        time: { value: 1.0 },
+        origin: {value: originTex},
+        colliders: { value: colliders },
+    }).forEach(([k, v]) => velocityUniforms[k] = v);
+    velocityVariable.wrapS =
+    velocityVariable.wrapT =
+    positionVariable.wrapS =
+    positionVariable.wrapT = THREE.RepeatWrapping;
+    const error = gpuCompute.init();
+    if (error) console.error(error);
+    velocityVariable.material.fragmentShader = velocityVariable.material.fragmentShader.replace("uniform sampler2D textureVelocity;\n\nuniform sampler2D texturePosition;", "");
+    positionVariable.material.fragmentShader = positionVariable.material.fragmentShader.replace("uniform sampler2D textureVelocity;\n\nuniform sampler2D texturePosition;", "");
+
+    let colors = {
+        "dark": {
+            "darkColor": new Float32Array([..."264caf".match(/../g).map(s => parseInt(s, 16) / 255), 1.5]),
+            "lightColor": new Float32Array([..."2c84fa".match(/../g).map(s => parseInt(s, 16) / 255), 1.2])
+        },
+        "light": {
+            "darkColor": new Float32Array([..."381885".match(/../g).map(s => parseInt(s, 16) / 255), 1.2]),
+            "lightColor": new Float32Array([..."7253ed".match(/../g).map(s => parseInt(s, 16) / 255), 1.8])
+        }
+    };
+    const isDark = () => !!document.getElementById('switch-style').checked;
+    const material = new THREE.ShaderMaterial({
+        uniforms: {
+            "pointSize": { value: 1 },
+            "texturePosition": { value: null },
+            "width": { value: fboWidth },
+            "height": { value: fboHeight },
+            "darkColor": { value: isDark()? colors.dark.darkColor: colors.light.darkColor },
+            "lightColor": { value: isDark()? colors.dark.lightColor: colors.light.lightColor },
+        },
+        vertexShader: `{% include_relative text.vert %}`,
+        fragmentShader: `{% include_relative text.frag %}`,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        depthTest: true,
+        transparent: true
+    });
+    const geometry = new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(
+        [...Array(fboWidth * fboHeight)].map((_, i) => [
+            (i % fboWidth) / fboWidth,
+            Math.floor(i / fboWidth) / fboHeight,
+            0, 0
+        ]).flat(),
+        4
+    ));
+    const mesh = new THREE.Points(geometry, material);
+    scene.add(mesh);
+    jtd.onThemeChange(function() {
+        material.uniforms.darkColor.value = isDark()? colors.dark.darkColor: colors.light.darkColor;
+        material.uniforms.lightColor.value = isDark()? colors.dark.lightColor: colors.light.lightColor;
+    });
+
+    let mouseCoordQueue = [];
+    function onMouseUpdate(ev) {
+        mouseCoordQueue.push(canvasToColliderVector(ev.offsetX, ev.offsetY));
+    }
+    let touchPoints = [];
+    canvas.addEventListener("mousedown", onMouseUpdate, false);
+    canvas.addEventListener("mouseup", onMouseUpdate, false);
+    canvas.addEventListener("mousemove", onMouseUpdate, false);
+    function turnOffColliders() {
+        for (let fi = 0; fi < MAX_COLLIDERS; ++fi) {
+            pointToCollider(fi, false);
+        }
+    }
+    canvas.addEventListener("pointerleave", turnOffColliders);
+    (canvas.document || document).addEventListener("pointerleave", turnOffColliders);
+    function onTouchUpdate(ev) {
+        let touches = ev.touches;
+        let rect = canvas.getBoundingClientRect();
+        if (touches.length == 0) turnOffColliders();
+        else for(let i = 0; i < touches.length; ++i) {
+            let touch = touches[i];
+            touchPoints.push(canvasToColliderVector(touch.clientX - rect.left, touch.clientY - rect.top));
+        }
+        ev.preventDefault();
+    }
+    canvas.addEventListener("touchstart", onTouchUpdate, {passive: false});
+    canvas.addEventListener("touchend", onTouchUpdate, {passive: false});
+    canvas.addEventListener("touchcancel", onTouchUpdate, {passive: false});
+    canvas.addEventListener("touchmove", onTouchUpdate, {passive: false});
+    let pickCoord = new THREE.Vector3();
+    let pickRay = new THREE.Ray();
+    let clickPlane = new THREE.Plane(new THREE.Vector3(0.0, 0.0, 1.0), 0.0);
+    function canvasToColliderVector(x, y) {
+        pickCoord.x = ((x / canvas.clientWidth) * 2.0) - 1.0;
+        pickCoord.y = -((y / canvas.clientHeight) * 2.0) + 1.0;
+        pickCoord.z = 0.1;
+        pickCoord.unproject(camera);
+        pickRay.set(camera.position, pickCoord.sub(camera.position).normalize());
+        let point = new THREE.Vector3();
+        pickRay.intersectPlane(clickPlane, point);
+        return point;
+    }
+    function pointToCollider(index, active, vector, size) {
+        if (index >= MAX_COLLIDERS) return;
+        let o = index * 4;
+        if (active) {
+            let textScale = 1;
+            colliders[o + 0] = (vector.x - mesh.position.x) / textScale;
+            colliders[o + 1] = (vector.y - mesh.position.y) / textScale;
+            colliders[o + 2] = (vector.z - mesh.position.z) / textScale;
+            colliders[o + 3] = size / textScale;
+        }
+        else colliders[o + 3] = -1;
+    }
+
+    function onWindowResize() {
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+        renderer.setPixelRatio(window.devicePixelRatio);
+    }
+
+    window.addEventListener( 'resize', onWindowResize, false );
+
+    function updateColliders() {
+        let fi = 0;
+        while (mouseCoordQueue.length) {
+            pointToCollider(fi++, true, mouseCoordQueue.shift(), 0.15);
+        }
+        while (touchPoints.length) {
+            pointToCollider(fi++, true, touchPoints.shift(), 0.15);
+        }
+    }
+
+    const controls = (() => {
+        let minPolarAngle = Math.PI / 4 * 1;
+        let maxPolarAngle = Math.PI / 4 * 3;
+        let minAzimuthAngle = -Math.PI / 2 * 0.2;
+        let maxAzimuthAngle = Math.PI / 2 * 0.2;
+        const STATE = {
+            NONE: - 1,
+            ROTATE: 0,
+        };
+        let state = STATE.NONE;
+        const spherical = new THREE.Spherical();
+        const sphericalDelta = new THREE.Spherical();
+        const rotateStart = new THREE.Vector2();
+        const rotateEnd = new THREE.Vector2();
+        const rotateDelta = new THREE.Vector2();
+        const rotateSpeed = new THREE.Vector2(0.2, 1);
+        const update = (() => {
+            const offset = new THREE.Vector3();
+            const quat = new THREE.Quaternion().setFromUnitVectors( camera.up, new THREE.Vector3( 0, 1, 0 ) );
+            const quatInverse = quat.clone().invert();
+
+            const lastPosition = new THREE.Vector3();
+            const lastQuaternion = new THREE.Quaternion();
+
+            const twoPI = 2 * Math.PI;
+            const EPS = 0.000001;
+            return () => {
+                const position = camera.position;
+                let dampingFactor = state == STATE.NONE? 1.9: 0.005;
+
+                offset.copy( position );
+                offset.applyQuaternion( quat );
+                spherical.setFromVector3( offset );
+
+                spherical.theta += sphericalDelta.theta * dampingFactor;
+                spherical.phi += sphericalDelta.phi * dampingFactor;
+                let min = minAzimuthAngle;
+                let max = maxAzimuthAngle;
+
+                if (min < - Math.PI) min += twoPI; else if (min > Math.PI) min -= twoPI;
+                if (max < - Math.PI) max += twoPI; else if (max > Math.PI) max -= twoPI;
+                if (min <= max) {
+                    spherical.theta = Math.max(min, Math.min(max, spherical.theta));
+                }
+                else {
+                    spherical.theta = (spherical.theta > (min + max) / 2)
+                        ? Math.max(min, spherical.theta)
+                        : Math.min(max, spherical.theta);
+                }
+
+                spherical.phi = Math.max( minPolarAngle, Math.min( maxPolarAngle, spherical.phi ) );
+
+                spherical.makeSafe();
+
+                spherical.radius = Math.max( 0, spherical.radius );
+
+                offset.setFromSpherical( spherical );
+
+                offset.applyQuaternion( quatInverse );
+
+                position.copy(offset);
+
+                camera.lookAt(0, 0, 0);
+                sphericalDelta.theta *= 1 - dampingFactor;
+                sphericalDelta.phi *= 1 - dampingFactor;
+
+
+                if (lastPosition.distanceToSquared( camera.position ) > EPS ||
+                    8 * ( 1 - lastQuaternion.dot( camera.quaternion ) ) > EPS ) {
+                    lastPosition.copy( camera.position );
+                    lastQuaternion.copy( camera.quaternion );
+                    return true;
+                }
+                return false;
+            };
+        })();
+        const rotateLeft = angle => sphericalDelta.theta -= angle;
+        const rotateUp = angle => sphericalDelta.phi -= angle;
+        canvas.addEventListener("mousemove", function(ev) {
+            if (state == STATE.NONE) {
+                rotateStart.set(canvas.clientWidth / 2, canvas.clientHeight / 2);
+                state = STATE.ROTATE;
+            }
+            else {
+                rotateEnd.set( ev.offsetX, ev.offsetY );
+                rotateDelta.subVectors( rotateEnd, rotateStart ).multiply(rotateSpeed);
+                rotateLeft( 2 * Math.PI * rotateDelta.x / canvas.clientHeight );
+                rotateUp( 2 * Math.PI * rotateDelta.y / canvas.clientHeight );
+                rotateStart.copy( rotateEnd );
+                update();
+            }
+        });
+        function mouseLeave(ev) {
+            if (state == STATE.NONE) return;
+            rotateEnd.set( canvas.clientWidth / 2, canvas.clientHeight / 2 );
+            rotateDelta.subVectors( rotateEnd, rotateStart ).multiply(rotateSpeed);
+            rotateLeft( 2 * Math.PI * rotateDelta.x / canvas.clientHeight );
+            rotateUp( 2 * Math.PI * rotateDelta.y / canvas.clientHeight );
+            rotateStart.copy( rotateEnd );
+            state = STATE.NONE;
+        }
+        canvas.addEventListener("mouseleave", mouseLeave);
+        (canvas.document || document).addEventListener("mouseleave", mouseLeave);
+
+        const orientationRotateSpeed = new THREE.Vector2(1.8, 2.5);
+        window.addEventListener('deviceorientation', function(ev) {
+            if (state == STATE.NONE) {
+                rotateStart.set(ev.gamma, ev.beta);
+                state = STATE.ROTATE;
+            }
+            else {
+                rotateEnd.set( ev.gamma, ev.beta );
+                rotateDelta.subVectors( rotateEnd, rotateStart ).multiply(orientationRotateSpeed);
+                rotateLeft( 2 * Math.PI * rotateDelta.x / canvas.clientHeight );
+                rotateUp( 2 * Math.PI * rotateDelta.y / canvas.clientHeight );
+                rotateStart.copy( rotateEnd );
+                update();
+            }
+        });
+
+        return { update, };
+    })();
+
+    function render() {
+        const now = performance.now();
+        positionUniforms.time.value = now;
+        velocityUniforms.time.value = now;
+        updateColliders();
+        gpuCompute.compute();
+        material.uniforms.texturePosition.value = gpuCompute.getCurrentRenderTarget(positionVariable).texture;
+        renderer.render(scene, camera);
+        controls.update();
+        requestAnimationFrame(render);
+    }
+    render();
+} catch (err) {
+    console.error(err);
+    document.getElementById("canvas-404").style.display = "none";
+    document.getElementsByClassName("h1-404")[0].style.display = "";
+}};
+</script>
+
+<div class="canvas-wrapper">
+    <h1 class="h1-404" style="display: none;">404</h1>
+    <canvas id="canvas-404"><h1 class="h1-404">404</h1></canvas>
+</div>
+
+
+<p>The page you requested could not be found. Try using the navigation {% if site.search_enabled != false %}or search {% endif %}to find what you're looking for or go to this <a href="{{ '/' }}">site's home page</a>.</p>

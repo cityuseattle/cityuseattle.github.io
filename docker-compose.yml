@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  jekyll:
+    build:
+      context: ./
+    ports:
+      - 4000:4000
+      - 4004:4004
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - JEKYLL_ENV=development2
+    stdin_open: true
+    tty: true
+    command: bundle exec jekyll serve --config _config_local.yml -H 0.0.0.0 -t --force_polling --livereload --livereload-port 4004
+

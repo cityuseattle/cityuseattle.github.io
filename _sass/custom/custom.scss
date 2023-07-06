@@ -1,0 +1,126 @@
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.search-input {
+  color: $body-text-color;
+}
+.search-result-doc.search-result-doc-parent {
+  opacity: 0.75;
+}
+
+.main {
+  overflow-y: auto;
+  scrollbar-width: none;  // Firefox
+  -ms-overflow-style: none; // IE 10+
+  &::-webkit-scrollbar {
+    display: none;  // Chrome & Safari
+  }
+}
+
+// TODO:
+// * The position and style conflict with the search button. Solution:
+//   * Determine whether the button exists according to site.search.button. Change the location if it exists.
+//   * The style remains current or consistent with the search button.
+// * Add some transform animations to enhance the user experience.
+#back-to-top {
+  position: fixed;
+  z-index: 999999999;
+  bottom: 1rem; right: 1rem;
+  display: block;
+  box-sizing: content-box;
+  line-height: 1rem; min-height: 2rem; width: 2rem;
+  padding: 0.375rem 0.25rem;
+  text-align: center;
+  @include btn-color($link-color, $base-button-color);
+
+  // The entire page is centered. The page width is lg (= $content-width + $nav-width).
+  // So to fit the "back to top" button in the right gaps, there needs to be twice as much space.
+  // lg + 2 * (padding-left + width + padding-right + right)
+  @media (min-width: rem(map-get($media-queries, "lg") + 2 * (0.25 + 2 + 0.25 + 1) * $root-font-size)) {
+    // 2.5 = padding-left + width + padding-right
+    right: calc(
+      (100% - #{$nav-width + $content-width}) / 2 - 2.5rem
+    );
+  }
+}
+
+.site-footer {
+  .toggle-mode {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    .icon, .toggle-switch {
+      display: inline-block;
+      height: 1.5rem;
+      vertical-align: middle;
+    }
+    .icon {
+      svg {
+        fill: currentColor;
+      }
+      ~ .icon {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+    .toggle-switch {
+      width: 60px;
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 47px;
+        height: 19px;
+
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 700;
+        input {
+          display: none;
+          &:checked + .slider {
+            // background-color: $blue-000;
+            border: 1px solid $blue-000;
+            &:before {
+              -webkit-transform: translateX(26px);
+              transform: translateX(26px);
+  
+              background-color: $blue-100;
+              // border: 1px solid $blue-100;
+            }
+          }
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          // background-color: $purple-000;
+          border: 1px solid $purple-000;
+          &:before {
+            background-color: $purple-100;
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 2px;
+            bottom: 1px;
+
+            box-sizing: border-box;
+          }
+          &.round {
+            border-radius: 34px;
+            &:before {
+              border-radius: 50%;
+            }
+            // &.dark {}
+          }
+        }
+      }
+    }
+  }
+}

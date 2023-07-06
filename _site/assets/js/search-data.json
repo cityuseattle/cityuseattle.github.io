@@ -1,0 +1,1400 @@
+{"0": {
+    "doc": "Python Basic",
+    "title": "Python Installation",
+    "content": "For Python installation follow https://cityuseattle.github.io/docs/environment/python/ . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#python-installation",
+    "relUrl": "/docs/tutorial/Python_Basic/#python-installation"
+  },"1": {
+    "doc": "Python Basic",
+    "title": "Variables",
+    "content": "Variables are containers for storing data values. Unlike other programming languages, Python has no command for declaring a variable. A variable is created the moment you first assign a value to it. A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables include: . | A variable name must start with a letter or the underscore character | A variable name cannot start with a number | A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _) | Variable names are case-sensitive (age, Age and AGE are three different variables) | . To create the variable type . message = “Hello World” . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#variables",
+    "relUrl": "/docs/tutorial/Python_Basic/#variables"
+  },"2": {
+    "doc": "Python Basic",
+    "title": "Multiple assignments",
+    "content": "Python allows you to assign values to multiple variables in one line and you can assign the same value to multiple variables in one line. print(\"\\nMultiple assignments\\n\") a, b, c = 5, 3.2, \"Hello\" print (\"a = \", a) print (\"b = \" , b) print (\"c = \", c) x = y = z = \"Python\" print (\"x =\"+ x) print (\"y =\"+ y) print (\"z =\"+ z) . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#multiple-assignments",
+    "relUrl": "/docs/tutorial/Python_Basic/#multiple-assignments"
+  },"3": {
+    "doc": "Python Basic",
+    "title": "Data Types",
+    "content": "Data types are the classification or categorization of data items. Data types represent a kind of value which determines what operations can be performed on that data. Numeric, non-numeric, and Boolean (true/false) are the most used data types. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#data-types",
+    "relUrl": "/docs/tutorial/Python_Basic/#data-types"
+  },"4": {
+    "doc": "Python Basic",
+    "title": "Numeric",
+    "content": "A numeric data type is any representation of data which has a numeric value. Python identifies three types of numbers: . | Integer: Positive or negative whole numbers (without a fractional part). For example: »&gt; x = 5 | Float: Any real number with a floating-point representation in which a fractional component is denoted by a decimal symbol or scientific notation. For example: »&gt; y = 2.5 | Complex number: A number with a real and imaginary component represented as x+yi. x and y are floats and i is -1 (the square root of -1 is called an imaginary number). For example: | . z = 2 + 3i . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#numeric",
+    "relUrl": "/docs/tutorial/Python_Basic/#numeric"
+  },"5": {
+    "doc": "Python Basic",
+    "title": "Boolean",
+    "content": "A Boolean is data with one of two built-in values: True or False. Notice that ‘T’ and ‘F’ are capitalized. “true” and “false” are not valid Booleans and Python will throw an error for them. For example: . print (10&gt;9) . Result: True . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#boolean",
+    "relUrl": "/docs/tutorial/Python_Basic/#boolean"
+  },"6": {
+    "doc": "Python Basic",
+    "title": "Sequence",
+    "content": "Type A sequence is an ordered collection of similar or different data types. Python has the following built-in sequence data types: . | String: A string value is a collection of one or more characters put in single, double, or triple quotes. The string is initialized in the following ways: | . message = “This is a string declaration” message = ‘This is also a string declaration’ . | List: A list object is an ordered collection of one or more data items, not necessarily of the same type, put in square brackets. | . list1 = ['physics', 'chemistry', 1997, 2000] . | Tuple: A Tuple object is an ordered collection of one or more data items, not necessarily of the same type, put in parentheses. A tuple is not mutable, i.e., it doesn’t have any methods for changing its contents. | . tup1 = ('physics', 'chemistry', 1997, 2000) . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#sequence",
+    "relUrl": "/docs/tutorial/Python_Basic/#sequence"
+  },"7": {
+    "doc": "Python Basic",
+    "title": "Dictionary",
+    "content": "A dictionary object is an unordered collection of data in a key: value pair form. A collection of such pairs is enclosed in curly brackets. For example: . {1:\"Steve\", 2:\"Bill\", 3:\"Ram\", 4: \"Farha\"} . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#dictionary",
+    "relUrl": "/docs/tutorial/Python_Basic/#dictionary"
+  },"8": {
+    "doc": "Python Basic",
+    "title": "String functions",
+    "content": "Python has a set of built-in methods that you can use on strings. message = \"this is also a string\" print(\"Title:\" + message.title()) print(\"Uppercase: \"+ message.upper()) print(\"Lowercase: \"+ message. lower()) . The title() method returns a string where the first character in every word is upper case. If the word contains a number or a symbol, the first letter after that will be converted to upper case. The upper() method returns a string where all characters are in upper case. Symbols and numbers are ignored. The lower() method returns a string where all characters are lower case. Symbols and numbers are ignored. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#string-functions",
+    "relUrl": "/docs/tutorial/Python_Basic/#string-functions"
+  },"9": {
+    "doc": "Python Basic",
+    "title": "Concatenation:",
+    "content": "In Python, there are a few ways to concatenate, or combine, strings. The new string that is created is referred to as a string object. This is because everything in Python is an object – which is why Python is an objected-oriented language. first_message = \"Hi!\" second_message = \"How are you ?\" full_message = f\"{first_message} {second_message}\" print(full_message) . Also called “formatted string literals,” f-strings are string literals that have an f at the beginning and curly braces containing expressions that will be replaced with their values. The expressions are evaluated at runtime and then formatted using the format protocol. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#concatenation",
+    "relUrl": "/docs/tutorial/Python_Basic/#concatenation"
+  },"10": {
+    "doc": "Python Basic",
+    "title": "Numbers and operators",
+    "content": "The Python language supports the following types of operators: . | Arithmetic Operators | Comparison (Relational) Operators | Assignment Operators | Logical Operators | Bitwise Operators | Membership Operators | Identity Operators | . The commonly used operators are discussed below. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#numbers-and-operators",
+    "relUrl": "/docs/tutorial/Python_Basic/#numbers-and-operators"
+  },"11": {
+    "doc": "Python Basic",
+    "title": "Arithmetic Operators",
+    "content": "Consider the values of a = 10 and b = 20. print(\"\\n FLoat\\n\") a =2.2 b =2 c = 0.1 print(\" a+b = \",a+b) print(\" a+c = \",a+c) print(\" a*b = \",a*b) print(\" a*c = \",a*c) . If we look at the answer of a + c and a ** b, it is displayed as an arbitrary number of decimal places. This happens in all languages and is of little concern. Python tries to find a way to represent the result as precisely as possible, which is sometimes difficult given how computers have to represent numbers internally. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#arithmetic-operators",
+    "relUrl": "/docs/tutorial/Python_Basic/#arithmetic-operators"
+  },"12": {
+    "doc": "Python Basic",
+    "title": "Comparison Operators",
+    "content": "Consider the values of a = 10 and b = 20. ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/#comparison-operators",
+    "relUrl": "/docs/tutorial/Python_Basic/#comparison-operators"
+  },"13": {
+    "doc": "Python Basic",
+    "title": "Python Basic",
+    "content": ". | Python Installation | Variables . | Multiple assignments | . | Data Types . | Numeric | Boolean | Sequence | Dictionary | . | String functions . | Concatenation: | . | Numbers and operators . | Arithmetic Operators | Comparison Operators | . | . ",
+    "url": "http://localhost:4000/docs/tutorial/Python_Basic/",
+    "relUrl": "/docs/tutorial/Python_Basic/"
+  },"14": {
+    "doc": "Debugging",
+    "title": "VSC Debugging",
+    "content": "Visual Studio Code’s debugging tool is an incredibly powerful tool for developers. It allows developers to pause, step through, and analyze the code they are writing to quickly identify and debug any errors. It provides many features such as breakpoints, variable exploration, and console output that help developers learn from their mistakes and easily fix any issues . Please watch below video to learn more about Debugging: . ",
+    "url": "http://localhost:4000/docs/debugging#vsc-debugging",
+    "relUrl": "/docs/debugging#vsc-debugging"
+  },"15": {
+    "doc": "Debugging",
+    "title": "Debugging",
+    "content": " ",
+    "url": "http://localhost:4000/docs/debugging",
+    "relUrl": "/docs/debugging"
+  },"16": {
+    "doc": "Are you using Apple Silicon?",
+    "title": "1) Parallels",
+    "content": "Parallels is probably the best all-around solution, with the significant caveat that it is not free, and is arguably pretty expensive. But it’s relatively fast and easy to use, so it may be worth it. ",
+    "url": "http://localhost:4000/docs/common/apple_m1/#1-parallels",
+    "relUrl": "/docs/common/apple_m1/#1-parallels"
+  },"17": {
+    "doc": "Are you using Apple Silicon?",
+    "title": "2) AWS EC2",
+    "content": "Amazon Web Service EC2 instances are virtual machine instances accessed remotely using your web browser or an interface like Microsoft Remote Desktop (which can be downloaded on Apple silicon). You can use a multitude of common operating systems on your instance. This in some ways is the most generically convenient solution, as anything with a web connection can access it, so your local hardware becomes irrelevant. However, there are drawbacks. First, it’s more complicated to set up to utilize its full potential. It’s definitely not as user-friendly as an app store solution like Parallels. Second, if you don’t want to pay, then the free instance is very slow to the point of unusability. Granted, it’s not expensive to get a somewhat more powerful solution, but if you don’t remember to stop your instances when you use them then costs can quickly accumulate. (A strength of AWS in general is that you will onlny be charged on-demand when the resource is actually being used. But it’s up to you to sofficially stop using the resource.) The more powerful an instance, the more charges can pile up. For now, the school doesn’t offer an internal solution ot this, so you must pick a potentially paid-for instance or suffer the performance hit. We will have a setup guide to getting a Windows instance of AWS EC2 running uploaded within the next few weeks. ",
+    "url": "http://localhost:4000/docs/common/apple_m1/#2-aws-ec2",
+    "relUrl": "/docs/common/apple_m1/#2-aws-ec2"
+  },"18": {
+    "doc": "Are you using Apple Silicon?",
+    "title": "Are you using Apple Silicon?",
+    "content": "Apple released Apple Silicon (M1) or other later version in the end of 2020. The big thing is that Apple changed their chip architecture from Intel to ARM. Some software is not developed for compatibility. To check if you’re using Apple Silicon, follow the instructions below. | Click the Apple icon in the top-left corner. | Click “About this Mac” | . If the Chip is “Apple M1”, that means you’re using Apple silicon. Some software may no longer be compatible, even on virtual machines. This is because the underlying architecture is different. All programming languages used to make software must be compiled to supported machine languages, which are unique to architectures. Intel and AMD architectures are very similar, so the overwhelming of desktop/laptop software will work on these machines. However, moving to an ARM-based custom architecture as Apple did with the Mac line messes this all up. Few of the compilers (yet) support the corresponding machine language. This necessitates finding novel solutions. Let’s look at what virtual machine solutions exist. ",
+    "url": "http://localhost:4000/docs/common/apple_m1/",
+    "relUrl": "/docs/common/apple_m1/"
+  },"19": {
+    "doc": "Setup Windows in AWS",
+    "title": "Table of contents",
+    "content": ". | Setting Up Windows EC2 Instance in AWS . | Create AWS Account | Create IAM User | Create and Launch the EC2 Instance | Using the EC2 Instance | . | . ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#table-of-contents",
+    "relUrl": "/docs/tools/aws_ec2_win/#table-of-contents"
+  },"20": {
+    "doc": "Setup Windows in AWS",
+    "title": "Setting Up Windows EC2 Instance in AWS",
+    "content": "A common situation for Mac users in particular is to not be able to use Microsoft products like Power BI or Access database. A straightforward if inefficient solution is to make a virtual Windows instance using the EC2 service on AWS. This guide will show you how to set up a free tier solution, which you could pay Amazon money for to get better performance if you so choose. Much of this guide will also be applicable to setting up Linux instances, such that there’s a good chance you could probably figure out the difference, but we won’t be covering that explicitly at this time. We’ll be following along with this EC2 tutorial and this Getting Started tutorial from AWS. ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#setting-up-windows-ec2-instance-in-aws",
+    "relUrl": "/docs/tools/aws_ec2_win/#setting-up-windows-ec2-instance-in-aws"
+  },"21": {
+    "doc": "Setup Windows in AWS",
+    "title": "Create AWS Account",
+    "content": "First step is to create an AWS account. Follow the online instructions. This creates a root user with root access privileges. ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#create-aws-account",
+    "relUrl": "/docs/tools/aws_ec2_win/#create-aws-account"
+  },"22": {
+    "doc": "Setup Windows in AWS",
+    "title": "Create IAM User",
+    "content": "Root access is too much for most use cases, including ours, so it’s better as a security habit to create an administrative or IAM user. When you log in to AWS, use this user with restricted access, therefore any compromise won’t have complete and total access to your system. Go to the AWS management console and click on IAM in the quick-access service list in the middle of the screen. If you don’t see it, click on the Services link next to the nine-square grid in the upper-left corner of the screen for a drop-down menu. Scroll down to the “Security, Identity, &amp; Compliance” option then mouse over and choose “IAM Identity Center” from the right-hand menu that appears. IAM is pretty rich but for now we’ll keep to the essentials for our purposes. | Go to Users in the left hand menu, then click “New Users” in the upper-right part of the new screen. | Give it a name then go to the next screen. | Create a User Group, give it a distinct name like “Admin”, and give it AdministratorAccess (should be the first option). Finishing will take you back to the previous screen. | Select your new User Group and go to the next screen. | Confirm your details – you can change and tweak other aspects later if you want – and click “Create user”. | . ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#create-iam-user",
+    "relUrl": "/docs/tools/aws_ec2_win/#create-iam-user"
+  },"23": {
+    "doc": "Setup Windows in AWS",
+    "title": "Create and Launch the EC2 Instance",
+    "content": "Go to the EC2 instance console and click “Launch instance” which should be in the left-center of the screen horizontally, probably towards the center-bottom vertically. | Give it a distinct name. | Click on Microsoft Windows for the operating system under Quick Start. | Note: Here is where you would diverge for something like a Linux distribution instead. | . | Instance type is where you select how powerful you want the instance to be. Currently the “Free tier eligible” instance type is called a “t2.micro” instance with 1 GB of RAM which is obviously not much. Honestly, performance will be proportionally affected. However, notice that there is on-demand pricing for «$1 / hour. These go up for more powerful instances, but it may be worth the fairly low cost to get yourself better performance. | How much better? The requirements page for Windows Server says at least 512 MB are needed for physical installations, but at least 800 MB for virtual ones. This is just less than our 1 GB, so 2 GB might give us enough breathing room without spending too much money. This would be the t2.small instance type, which is appropriately twice as expensive per hour. | NOTE: All AWS billing is on-demand, which is a key selling point of cloud services. You are only charged for each hour of a running instance - so make sure to stop your instances when you’re done! | Free Tier will be explained explicitly on the right of the screen. Usually, something like the first 750 hours of use are free. This is only available for t2.micro instance types at the time of writing. | . | Key pairs are a key security item. Click on “Create new pair” and give it a name. Leaving it as PEM is fine unless you know you need PPK. | IMPORTANT: Download and save your key now because it’s your only chance. | You can also reuse keys between instances, though this potentially creates security vulnerabilities. | . | Security groups are network firewall access schemes. For our purposes, the default settings should be fine. Note that it’s using the RDP (Remote Desktop Protocol) for Windows, which will be important for connecting. | The final setting is storage. The free tier comes with 30 GB. This is probably fine for us. Storage can be expanded with other AWS services, such as S3 which is the simplest. We do not cover those in this tutorial. | Go ahead and launch instance. Do not close your browser. | . When finished, you can go to “View All Instances.” . ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#create-and-launch-the-ec2-instance",
+    "relUrl": "/docs/tools/aws_ec2_win/#create-and-launch-the-ec2-instance"
+  },"24": {
+    "doc": "Setup Windows in AWS",
+    "title": "Using the EC2 Instance",
+    "content": "From “View All Instances” you’ll first want to check the “Instance state” of the one you’re interested in. If it’s stopped, you’ll need to start it by checking the appropriate box then click the drop-down menu “Instance state” and select “Start instance.” You’ll have to wait for two checks to successfully complete before proceeding. If the instance is good, it’ll show “Running” with a checkmark in green. | To connect, you can either check the box and click “Connect” at the top of the screen; or you can click on the alphanumeric “Instance ID” to go to a status screen, which will also have a dedicated “Connect” button at the top of the screen. | Either way, on the next screen, choose “RDP client” since we set up the network with a RDP connection. You can download the RDP file to a location on your computer. Keep this location in mind. | Click “Get password” then on the next screen click “Upload private key file” and choose the PEM (or PPK) file you downloaded earlier. Click “Decrypt password.” Copy the new password towards the bottom of the screen. Do this now because you won’t have another chance. | . That’s all you can do from AWS itself. Next you’ll need to download a Remote Desktop client from Microsoft, the eternal gatekeepers. You should be able to just search for this on the App Store. (Linux is more complicated. We don’t cover that in this tutorial.) . ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/#using-the-ec2-instance",
+    "relUrl": "/docs/tools/aws_ec2_win/#using-the-ec2-instance"
+  },"25": {
+    "doc": "Setup Windows in AWS",
+    "title": "Setup Windows in AWS",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/aws_ec2_win/",
+    "relUrl": "/docs/tools/aws_ec2_win/"
+  },"26": {
+    "doc": "Recommended bash tools",
+    "title": "Bash Tools",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/bash/#bash-tools",
+    "relUrl": "/docs/git/bash/#bash-tools"
+  },"27": {
+    "doc": "Recommended bash tools",
+    "title": "Table of contents",
+    "content": ". | Oh My ZSH . | Install It | . | . ",
+    "url": "http://localhost:4000/docs/git/bash/#table-of-contents",
+    "relUrl": "/docs/git/bash/#table-of-contents"
+  },"28": {
+    "doc": "Recommended bash tools",
+    "title": "Oh My ZSH",
+    "content": "Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration. It comes bundled with thousands of helpful functions, helpers, plugins, themes, and a few things that make you shout… . “Oh My ZSH!” . Install It . $ sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" . ",
+    "url": "http://localhost:4000/docs/git/bash/#oh-my-zsh",
+    "relUrl": "/docs/git/bash/#oh-my-zsh"
+  },"29": {
+    "doc": "Recommended bash tools",
+    "title": "Recommended bash tools",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/bash/",
+    "relUrl": "/docs/git/bash/"
+  },"30": {
+    "doc": "Common Solutions",
+    "title": "Common Solutions",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common",
+    "relUrl": "/docs/common"
+  },"31": {
+    "doc": "Database",
+    "title": "Database",
+    "content": " ",
+    "url": "http://localhost:4000/docs/db",
+    "relUrl": "/docs/db"
+  },"32": {
+    "doc": "Install Docker",
+    "title": "Table of contents",
+    "content": ". | What is Docker? | Install Docker on MacOS . | Download the (free) Docker Community Edition for Mac (unless you’ve already got it installed on your system). | Choose Right Installation Package | To install | . | Launch Docker | Install Docker on Windows . | Download the (free) Docker Community Edition for Windows (unless you’ve already got it installed on your system). | Install interactively | . | . What is Docker? . Docker is a platform that enables software to run in its own isolated environment. SQL Server (from 2017) can be run on Docker in its own isolated container. Once Docker is installed, you simply download — or “pull” — the SQL Server on Linux Docker Image to your Mac, then run it as a Docker container. This container is an isolated environment that contains everything SQL Server needs to run. ",
+    "url": "http://localhost:4000/docs/tools/docker/#table-of-contents",
+    "relUrl": "/docs/tools/docker/#table-of-contents"
+  },"33": {
+    "doc": "Install Docker",
+    "title": "Install Docker on MacOS",
+    "content": "Download the (free) Docker Community Edition for Mac (unless you’ve already got it installed on your system). This will enable you to run SQL Server from within a Docker container. Choose Right Installation Package . To download, visit the Docker CE for Mac download page and click Get Docker. There are two types installation package provided. If you’re using Apple M1 chip (Check if you’re using Apple M1 here) . To install . Double-click on the .dmg file and then drag the Docker.app icon to your Application folder. ",
+    "url": "http://localhost:4000/docs/tools/docker/#install-docker-on-macos",
+    "relUrl": "/docs/tools/docker/#install-docker-on-macos"
+  },"34": {
+    "doc": "Install Docker",
+    "title": "Launch Docker",
+    "content": ". | Launch Docker the same way you’d launch any other application (eg, via the Applications folder, the Launchpad, etc). | When you open Docker, you might be prompted for your password so that Docker can install its networking components and links to the Docker apps. Go ahead and provide your password, as Docker needs this to run. | . ",
+    "url": "http://localhost:4000/docs/tools/docker/#launch-docker",
+    "relUrl": "/docs/tools/docker/#launch-docker"
+  },"35": {
+    "doc": "Install Docker",
+    "title": "Install Docker on Windows",
+    "content": "Download the (free) Docker Community Edition for Windows (unless you’ve already got it installed on your system). To download, visit the Docker CE for Windows download page and click Get Docker. Install interactively . 1 Double-click Docker Desktop Installer.exe to run the installer. If you haven’t already downloaded the installer (Docker Desktop Installer.exe), you can get it from Docker Hub. It typically downloads to your Downloads folder, or you can run it from the recent downloads bar at the bottom of your web browser. 2 When prompted, ensure the Use WSL 2 instead of Hyper-V option on the Configuration page is selected or not depending on your choice of backend. If your system only supports one of the two options, you will not be able to select which backend to use. 3 Follow the instructions on the installation wizard to authorize the installer and proceed with the install. 4 When the installation is successful, click Close to complete the installation process. 5 If your admin account is different to your user account, you must add the user to the docker-users group. Run Computer Management as an administrator and navigate to Local Users and Groups &gt; Groups &gt; docker-users. Right-click to add the user to the group. Log out and log back in for the changes to take effect. ",
+    "url": "http://localhost:4000/docs/tools/docker/#install-docker-on-windows",
+    "relUrl": "/docs/tools/docker/#install-docker-on-windows"
+  },"36": {
+    "doc": "Install Docker",
+    "title": "Install Docker",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/docker/",
+    "relUrl": "/docs/tools/docker/"
+  },"37": {
+    "doc": "Environment",
+    "title": "Environment",
+    "content": " ",
+    "url": "http://localhost:4000/docs/env",
+    "relUrl": "/docs/env"
+  },"38": {
+    "doc": "Environment Variable",
+    "title": "Environment Variable",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/environment_variable/",
+    "relUrl": "/docs/common/environment_variable/"
+  },"39": {
+    "doc": "Environment Variable",
+    "title": "Table of contents",
+    "content": ". | What are environment variables? . | Classification of environment variables . | User and system environment variables | Permanent and temporary environment variables | . | . | How to modify environment variables? . | For macOS . | Detect current terminal | Set temporary environment variables | Set permanent user environment variables | . | For Windows . | Set permanent variable . | Windows 10 or newer | Other Windows | . | Set temporary variable . | Command Prompt (cmd) | PowerShell (the terminal used by default in VS Code) | Git Bash | . | . | For Linux | . | Resource | . ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#table-of-contents",
+    "relUrl": "/docs/common/environment_variable/#table-of-contents"
+  },"40": {
+    "doc": "Environment Variable",
+    "title": "What are environment variables?",
+    "content": "Environment variables generally refer to some parameters used in the operating system to specify the operating environment of the operating system, such as the location of the temporary folder and the location of the system folder. The system maintains a global variable table at runtime, which all system processes can access. Simply put, environment variables contain the information that the system and user applications will use, and are the parameters required for the system and applications to start and run. ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#what-are-environment-variables",
+    "relUrl": "/docs/common/environment_variable/#what-are-environment-variables"
+  },"41": {
+    "doc": "Environment Variable",
+    "title": "Classification of environment variables",
+    "content": "User and system environment variables . Modern operating systems are almost always multi-user operating systems. Different users can have different environment variables, and system environment variables are common to all users. When used, the system will append the user environment variable to the system environment variable, and then pass it to the software for use. According to the maximum number of users allowed to operate the computer at the same time, the operating system can be divided into the single-user operating system and multi-user operating system. Allowing multiple users to use the computer at the same time is called a multi-user operating system; on the contrary, allowing at most one user to operate the computer at the same time is called a single-user operating system. Permanent and temporary environment variables . | Permanent environment variables refer to environment variables that will not disappear due to software shutdown, power failure, or shutdown. These variables are typically stored in system configuration files. | Temporary environment variables refer to the environment variables that exist during the running of the software. These environment variables are independent of each other and disappear when the software is closed. | . ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#classification-of-environment-variables",
+    "relUrl": "/docs/common/environment_variable/#classification-of-environment-variables"
+  },"42": {
+    "doc": "Environment Variable",
+    "title": "How to modify environment variables?",
+    "content": "Since the startup and operation of the system depend on environment variables, all operations need to be cautious! If the settings are wrong, it can seriously lead to downtime or even the worst case of not being able to boot the system. So make sure you know what you are doing before modifying environment variables. ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#how-to-modify-environment-variables",
+    "relUrl": "/docs/common/environment_variable/#how-to-modify-environment-variables"
+  },"43": {
+    "doc": "Environment Variable",
+    "title": "For macOS",
+    "content": "Detect current terminal . macOS has a variety of built-in shells. Before adding environment variables, you must first know what shell you are using. Open a terminal: . $ echo $SHELL # Print the terminal you are running now $ cat /etc/shells # List all terminal paths. Common possible outputs: /bin/sh /bin/bash /bin/zsh . | /bin/sh: The Bourne Shell (sh) is the original UNIX shell and is available on every UNIX. Bourne Shell is quite good at shell programming convenience, but it is not as good at handling user interaction as other shells. | /bin/bash: Bourne Again Shell (bash) is the default shell of Linux, it is an extension of Bourne Shell. It is fully compatible with Bourne Shell and adds many features on the basis of Bourne Shell. It can provide functions such as command completion, command editing, and command history. It also includes many advantages of C Shell (csh) and Korn Shell (ksh), a flexible and powerful editing interface, and a user-friendly interface at the same time. | /bin/zsh: Z shell (zsh) is a powerful terminal software that can be used both as an interactive terminal and as a script interpreter. It is compatible with bash (not compatible by default unless it is set to emulate sh) and provides many improvements, such as more efficiency, better auto-completion, better filename expansion (wildcard expansion), better Array processing, high customizability. | . macOS defaults to Bourne Shell (sh). By default, the environment variable configuration files and loading order in the macOS terminal are as follows: . /etc/profile /etc/bashrc # sh /etc/zshrc # zsh /etc/paths ~/.bash_profile # sh ~/.bashrc # sh ~/.zshrc # zsh ~/.bash_login ~/.profile . Where /etc/profile, /etc/bashrc, /etc/zshrc and /etc/paths are system-level environment variables, valid for all users. Their loading timing is different. Modifying them directly is not recommended. This only guides how to add user environment variables. Set temporary environment variables . The export command is used to set or display environment variables. Environment variables added via export are only valid for this login cycle. (It will disappear after exiting the terminal.) . $ export VERIABLE_NAME=\"value\" # Set the VARIABLE_NAME environment variable to value. $ echo $VERIABLE_NAME # Display the value of the VERIABLE_NAME environment variable $ export -p # View all current environment variables $ env # Another way to see all current environment variables . For example, if you wanted to append the path to the current PATH variable, you would pass command of the form: . export PATH=\"$PATH:&lt;PATH 1&gt;:&lt;PATH 2&gt;:&lt;PATH 3&gt;:...:&lt;PATH N&gt;\" . Set permanent user environment variables . If you want the value of a variable permanently across sessions and all Terminal windows, you must set it in the shell startup script. To add user environment variables, just modify ~/.bash_profile (Bourne Shell) or ~/.zshrc (zsh). These two files will run when the terminal starts. Therefore, permanent variables can be set by setting temporary environment variables in these two files. Let’s use vi to edit files, if you’re new to vi, or you’re looking for other ways to edit the text in the terminal, read this tutorial. Replace &lt;file_path&gt; below with ~/.bash_profile (Bourne Shell) or ~/.zshrc (zsh). $ cp &lt;file_path&gt; &lt;file_path&gt;_add_var.bak # Backup the file, if something goes wrong, you can restore it by # $ cp &lt;file_path&gt;_add_var.bak &lt;file_path&gt; $ vi &lt;file_path&gt; # Edit the file, it will be created if it doesn't exist. After entering the vi editing interface, press i to enter the editing mode. At the end of the file, add the export command similar to set temporary environment variables. For example, if I want to add the path /usr/local/bin to the front of PATH, I can type export PATH=\"/usr/local/bin:$PATH\". When you are done editing, press esc, and type :wq to save and exit the vi editor. In order for the modified content to take effect in the current terminal, enter the following command to make the terminal reload the file: . $ source &lt;file_path&gt; . ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#for-macos",
+    "relUrl": "/docs/common/environment_variable/#for-macos"
+  },"44": {
+    "doc": "Environment Variable",
+    "title": "For Windows",
+    "content": "Set permanent variable . Windows 10 or newer . | Open the Start Search, type in “env”, and choose “Edit the system environment variables”: . If you are using an operating system in another language, it may not be searchable. You can press Win + E to open the file explorer, right-click an empty location, select Properties to enter the System interface of the control panel, and then click Advance system settings in the list on the left. | Click the “Environment Variables…” button. | Set the environment variables as needed. | The New button adds an additional variable | The Edit button modifies the selected variable | The Delete button deletes the selected variable | Dismiss all of the dialogs by choosing OK. Your changes are saved! | . | Next, this tutorial takes editing and adding a new path to the PATH environment variable as an example. Select the PATH variable in your user’s environment variable or system’s environment variable and click Edit. | In the pop-up editing interface, click “New” and enter a new path. You can also click “Browse…” after clicking “New”, navigate to the path you want, and click “OK” to add a path. | When you are finished editing, save your changes by keep clicking OK until you close the “System Properties” window. | If you want the changes to take effect in a running terminal, close the terminal and rerun it. | . Other Windows . For other versions of Windows, find out how to edit environment variables yourself. It is worth noting that when editing the PATH, pay attention to the use of semicolons ; to separate each path. A possibly helpful article, this is the official Java help document, which mentions the specific method of setting the PATH variable: https://www.java.com/en/download/help/path.html . Set temporary variable . Command Prompt (cmd) . $ set VERIABLE_NAME=\"value\" # Set the VARIABLE_NAME environment variable to value. $ echo %VERIABLE_NAME% # Display the value of the VERIABLE_NAME environment variable $ set # View all current environment variables . PowerShell (the terminal used by default in VS Code) . $ $env:VERIABLE_NAME=\"value\" # Set the VARIABLE_NAME environment variable to value. $ $env:VERIABLE_NAME # Display the value of the VERIABLE_NAME environment variable $ dir env: # View all current environment variables . Git Bash . $ export VERIABLE_NAME=\"value\" # Set the VARIABLE_NAME environment variable to value. $ echo $VERIABLE_NAME # Display the value of the VERIABLE_NAME environment variable $ export -p # View all current environment variables $ env # Another way to see all current environment variables . ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#for-windows",
+    "relUrl": "/docs/common/environment_variable/#for-windows"
+  },"45": {
+    "doc": "Environment Variable",
+    "title": "For Linux",
+    "content": "The method is similar to that of macOS, please check the For macOS section and set it according to your personal research. ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#for-linux",
+    "relUrl": "/docs/common/environment_variable/#for-linux"
+  },"46": {
+    "doc": "Environment Variable",
+    "title": "Resource",
+    "content": ". | https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables | https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1 | https://support.apple.com/guide/terminal/use-environment-variables-apd382cc5fa-4f58-4449-b20a-41c53c006f8f/mac | . ",
+    "url": "http://localhost:4000/docs/common/environment_variable/#resource",
+    "relUrl": "/docs/common/environment_variable/#resource"
+  },"47": {
+    "doc": "Generating an SSH key",
+    "title": "Generating an SSH key",
+    "content": "All operations in this tutorial are based on the terminal. If you don’t know what a terminal is, check out the tutorial What’s the Terminal? . The Secure Shell (SSH) Protocol is a cryptographic network protocol for operating network services securely over an unsecured network. Using the SSH protocol, you can connect and authenticate to remote servers and services. ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/",
+    "relUrl": "/docs/common/gen_ssh_key/"
+  },"48": {
+    "doc": "Generating an SSH key",
+    "title": "Table of contents",
+    "content": ". | Considerations . | Windows . | Windows 10 / 11; Windows Server 2019 / 2022 . | Install OpenSSH using Windows Settings | . | Windows 7 / 8; Other Windows | . | macOS | . | Checking for existing SSH keys | Generating a new SSH key | Adding your SSH key to the ssh-agent | . ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#table-of-contents",
+    "relUrl": "/docs/common/gen_ssh_key/#table-of-contents"
+  },"49": {
+    "doc": "Generating an SSH key",
+    "title": "Considerations",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#considerations",
+    "relUrl": "/docs/common/gen_ssh_key/#considerations"
+  },"50": {
+    "doc": "Generating an SSH key",
+    "title": "Windows",
+    "content": "Windows 10 / 11; Windows Server 2019 / 2022 . If you are using Windows 10, you first need to check your Windows version. Press the Win key and the R key at the same time to open the run window, enter winver in the window and press Enter, you can see the Windows version you are using in the pop-up window. Microsoft integrated OpenSSH into Windows 10 starting with build 1709. But not stable until the build 1809 and later. If your version is between 1709 and 1809, try to do your own research on how to use it after completing this section. Or you can check out the next section to use SSH from Git Bash. If your version is lower than 1709, please go directly to the next section. Install OpenSSH using Windows Settings . This section will use the GUI method to install OpenSSH, if you want to install it through PowerShell, please check here. | Open Settings, select Apps &gt; Apps &amp; Features, then select Optional Features. | Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then: . | Find OpenSSH Client, then click Install | Find OpenSSH Server, then click Install | . | . Once setup completes, return to Apps &gt; Apps &amp; Features and Optional Features and you should see OpenSSH listed. To verify that SSH is working, open a command line and type ssh or ssh -V, if you do it correctly, you will get the following output: . $ ssh usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-J [user@]host[:port]] [-L address] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q query_option] [-R address] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] destination [command] $ ssh -V OpenSSH_for_Windows_8.1p1, LibreSSL 3.0.2 . Windows 7 / 8; Other Windows . You can completely use PuTTY to complete SSH-related operations, but considering the popularity of PuTTY and the difficulty of PuTTY-related tutorials, here we will use Git Bash to operate. Git Bash is a BASH emulation installed by default during Git installation. If you haven’t installed Git, please follow this tutorial to install it. To access the Git Bash, you can right-click on any folder (including the desktop) in Windows Explorer and select “Git Bash Here”, you can also find it in the Windows start menu: .      . The first picture is the right-click menu, and the second is the start menu. Although the screenshots are for Windows 10 as examples, there are similar options in other Windows. After open Git Bash, type ssh or ssh -V, if there is output like the following, then SSH is working fine: . $ ssh usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address] [-c cipher_spec] [-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file] [-J [user@]host[:port]] [-L address] [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port] [-Q query_option] [-R address] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]] destination [command] $ ssh -V OpenSSH_8.1p1, OpenSSL 1.1.1d 10 Sep 2019 . Depending on the version of Git and SSH, the output will differ slightly. ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#windows",
+    "relUrl": "/docs/common/gen_ssh_key/#windows"
+  },"51": {
+    "doc": "Generating an SSH key",
+    "title": "macOS",
+    "content": "macOS already comes with SSH software to complete this tutorial. However, for security reasons, it is recommended to update SSH for better security. | You can avoid using the old one that comes with the system by installing the latest one via Homebrew. If you don’t have Homebrew, you can find the Homebrew installation tutorial here. | Or you can update the entire OpenSSH suite. | . ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#macos",
+    "relUrl": "/docs/common/gen_ssh_key/#macos"
+  },"52": {
+    "doc": "Generating an SSH key",
+    "title": "Checking for existing SSH keys",
+    "content": "Before you generate an SSH key, you can check to see if you have any existing SSH keys. | Open Terminal. If you are Windows OS, open PowerShell or Git Bash. | Enter ls ~/.ssh to see if existing SSH keys are present. $ ls ~/.ssh # Lists the files in your .ssh directory, if they exist . | Check the directory listing to see if you already have a public SSH key. The file with the .pub extension is the public key, and the file without the extension is the private key. For information security, please do not share the private key on the Internet. By default, the filenames of supported public keys for GitHub are one of the following. | id_rsa.pub | id_ecdsa.pub | id_ed25519.pub | . Tip: If you receive an error that ~/.ssh doesn’t exist, you do not have an existing SSH key pair in the default location. You can create a new SSH key pair in the next section. Note: GitHub is improving security by dropping older, insecure key types. DSA keys (ssh-dss) are no longer supported. Existing keys will continue to function through March 15, 2022. You cannot add new DSA keys to your user account on GitHub.com. RSA keys (ssh-rsa) with a valid_after before November 2, 2021 may continue to use any signature algorithm. RSA keys generated after that date must use a SHA-2 signature algorithm. Some older clients may need to be upgraded in order to use SHA-2 signatures. | If you already have an SSH key that you can use, you can choose to continue with the steps in the next section to generate a new SSH key. Make a backup if you don’t want to overwrite the new key over the old one. | . ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#checking-for-existing-ssh-keys",
+    "relUrl": "/docs/common/gen_ssh_key/#checking-for-existing-ssh-keys"
+  },"53": {
+    "doc": "Generating an SSH key",
+    "title": "Generating a new SSH key",
+    "content": "If you don’t have an existing public and private key pair, type the following command to generate a new SSH Key. Note: replace &lt;email&gt; with the email address you used to register GitHub. $ ssh-keygen -t ed25519 -C \"&lt;email&gt;\" . Note: If you are using a legacy system that doesn’t support the Ed25519 algorithm, use: . $ ssh-keygen -t rsa -b 4096 -C \"&lt;email&gt;\" . Example output: . Generating public/private &lt;algorithm&gt; key pair. When you’re prompted to “Enter a file in which to save the key,” press Enter. This accepts the default file location. Enter file in which to save the key (/home/your username/.ssh/id_&lt;algorithm&gt;): [Press Enter] Created directory '/home/your username/.ssh'. At the prompt, type a secure passphrase. You can enter the password, but Git will ask you to enter this password every time you connect to the remote server (GitHub). If you choose to use a password, you can use ssh-agent to avoid re-entering the password in a short time. If you are using your own computer, it is recommended to keep it empty (press Enter directly). Enter passphrase (empty for no passphrase): [Press Enter or Type a passphrase] Enter same passphrase again: [Press Enter or Type a passphrase] Your identification has been saved in /home/your username/.ssh/id_&lt;algorithm&gt;. Your public key has been saved in /home/your username/.ssh/id_&lt;algorithm&gt;.pub. The key fingerprint is: . When you’re done, remember the section Checking for existing SSH keys to check your existing SSH keys at any time. ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#generating-a-new-ssh-key",
+    "relUrl": "/docs/common/gen_ssh_key/#generating-a-new-ssh-key"
+  },"54": {
+    "doc": "Generating an SSH key",
+    "title": "Adding your SSH key to the ssh-agent",
+    "content": "If you did not enter passphrase when generating the SSH key, you can skip this section. Since the configuration of ssh-agent is different for each operating system, due to the length of the article, please read the official GitHub tutorial for details to configure your ssh-agent according to your OS: . Generating a new SSH key and adding it to the ssh-agent: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent . Working with SSH key passphrases: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases . ",
+    "url": "http://localhost:4000/docs/common/gen_ssh_key/#adding-your-ssh-key-to-the-ssh-agent",
+    "relUrl": "/docs/common/gen_ssh_key/#adding-your-ssh-key-to-the-ssh-agent"
+  },"55": {
+    "doc": "Git",
+    "title": "Git",
+    "content": "People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. Version control systems (VCS) make it easy to store different versions of a project (without any fixed rules or time). You can easily restore an earlier record and compare the content with the current data to find the differences. In addition, VCS are an effective tool to cooperate with many other people in the same project. In this section, we will learn about one of the most popular VCS, which is Git and GitHub. First of all, Git and GitHub are not the same thing. Git is a VCS, while GitHub is a hosting server for software development version control. The way Git works is that it creates a repository to store each version of the project every time developers modify or add some features into the project. Developers can use Git through the terminal or command line. However, Git only allows you to control your project version on your local machine. Therefore, if 2 or more people are working on the same project, how can we connect the works of all the members? That is why we need a hosting server such as GitHub. To learn more about Git and GitHub visit: . Git &amp; GitHub in a Nutshell . Git &amp; GitHub Crash Course For Beginners . Git-Pro V2 . Connecting To GitHub w/SSH . ",
+    "url": "http://localhost:4000/docs/git",
+    "relUrl": "/docs/git"
+  },"56": {
+    "doc": "Create GitHub Account",
+    "title": "Create an Account on GitHub",
+    "content": ". | Visit https://github.com/ and click on “Sign up for GitHub” . | Fill in the form with your Email Address, Password and your special username. It is very straightforward. | After verifying again, you will be redirected to the initial dashboard page. | At this point you have created your GitHub account. | Please email your username to your TA if requested. | . ",
+    "url": "http://localhost:4000/docs/git/github_account/#create-an-account-on-github",
+    "relUrl": "/docs/git/github_account/#create-an-account-on-github"
+  },"57": {
+    "doc": "Create GitHub Account",
+    "title": "Create GitHub Account",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/github_account/",
+    "relUrl": "/docs/git/github_account/"
+  },"58": {
+    "doc": "Accessing GitHub Codespaces",
+    "title": "Accessing GitHub Codespaces",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/github_codepsace/",
+    "relUrl": "/docs/git/github_codepsace/"
+  },"59": {
+    "doc": "Accessing GitHub Codespaces",
+    "title": "Table of contents",
+    "content": ". | Codespaces | Steps to access codespaces from HOS repository | . ",
+    "url": "http://localhost:4000/docs/git/github_codepsace/#table-of-contents",
+    "relUrl": "/docs/git/github_codepsace/#table-of-contents"
+  },"60": {
+    "doc": "Accessing GitHub Codespaces",
+    "title": "Codespaces",
+    "content": "GitHub Codespaces are online cloud-based development environments that allow you to easily write, run, and debug your code. It is fully integrated with your GitHub repository and provides a seamless experience for developers. It would help if you had a GitHub account and an active internet connection to access the Codespaces environment. ",
+    "url": "http://localhost:4000/docs/git/github_codepsace/#codespaces",
+    "relUrl": "/docs/git/github_codepsace/#codespaces"
+  },"61": {
+    "doc": "Accessing GitHub Codespaces",
+    "title": "Steps to access codespaces from HOS repository",
+    "content": ". | From your course shell, visit the HOS. Visit the HOS GitHub Classroom. | Go to your repository created from Brightspace on the GitHub classroom. | Download the given HOS guidelines that you will use for your hands-on practices. Also, check the README.md for your HOS. | In the top-right corner, click on the “&lt;&gt;Code” drop-down menu. Select “Create a codespace on main.” . | Wait for the Codespaces environment to load. Once loaded, you can access the terminal, file explorer, and other tools to start working on your project. Once your codespace is created, the template repository will be automatically cloned into it. Now you can run the application and launch it in a browser which we call cloud IDE (Integrated Development Environment). We use Visual Studio Code for the web. | . ",
+    "url": "http://localhost:4000/docs/git/github_codepsace/#steps-to-access-codespaces-from-hos-repository",
+    "relUrl": "/docs/git/github_codepsace/#steps-to-access-codespaces-from-hos-repository"
+  },"62": {
+    "doc": "Install GitHub Desktop",
+    "title": "Install GitHub Desktop",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/github_desktop/",
+    "relUrl": "/docs/git/github_desktop/"
+  },"63": {
+    "doc": "Install GitHub Desktop",
+    "title": "Table of contents",
+    "content": ". | For macOS . | Install | Login to GitHub on Desktop | Authorize GitHub Desktop | First time configure your Name and Email | . | For Windows . | Download GitHub Desktop for Windows | Install | Login and Authorize GitHub Desktop | First time configure your Name and Email | Done | . | . Open the GitHub Desktop Download Page. Choose the correct version for your computer. If you’re using an Apple silicon M1 chip, click “Apple silicon machines.” to download. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#table-of-contents",
+    "relUrl": "/docs/git/github_desktop/#table-of-contents"
+  },"64": {
+    "doc": "Install GitHub Desktop",
+    "title": "For macOS",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#for-macos",
+    "relUrl": "/docs/git/github_desktop/#for-macos"
+  },"65": {
+    "doc": "Install GitHub Desktop",
+    "title": "Install",
+    "content": "After you download GitHub Desktop and click the installation package, you will get a GitHub Desktop.app file. Move it to the Application folder. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#install",
+    "relUrl": "/docs/git/github_desktop/#install"
+  },"66": {
+    "doc": "Install GitHub Desktop",
+    "title": "Login to GitHub on Desktop",
+    "content": "The first time you open GitHub Desktop it will look like this: . ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#login-to-github-on-desktop",
+    "relUrl": "/docs/git/github_desktop/#login-to-github-on-desktop"
+  },"67": {
+    "doc": "Install GitHub Desktop",
+    "title": "Authorize GitHub Desktop",
+    "content": "Click “Sign in to GitHub.com”. If you have a GitHub account signed in, you should see a similar page as below. Click “Authorize desktop”. No GitHub account yet? Follow Create an Account on GitHub to register a new account and then go back and refresh the page again. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#authorize-github-desktop",
+    "relUrl": "/docs/git/github_desktop/#authorize-github-desktop"
+  },"68": {
+    "doc": "Install GitHub Desktop",
+    "title": "First time configure your Name and Email",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#first-time-configure-your-name-and-email",
+    "relUrl": "/docs/git/github_desktop/#first-time-configure-your-name-and-email"
+  },"69": {
+    "doc": "Install GitHub Desktop",
+    "title": "For Windows",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#for-windows",
+    "relUrl": "/docs/git/github_desktop/#for-windows"
+  },"70": {
+    "doc": "Install GitHub Desktop",
+    "title": "Download GitHub Desktop for Windows",
+    "content": "Go to https://desktop.github.com/ and download the GitHub Desktop for Windows. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#download-github-desktop-for-windows",
+    "relUrl": "/docs/git/github_desktop/#download-github-desktop-for-windows"
+  },"71": {
+    "doc": "Install GitHub Desktop",
+    "title": "Install",
+    "content": "After downloading GitHub Desktop, click on the file to start the installation process. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#install-1",
+    "relUrl": "/docs/git/github_desktop/#install-1"
+  },"72": {
+    "doc": "Install GitHub Desktop",
+    "title": "Login and Authorize GitHub Desktop",
+    "content": "Now you have installed GitHub Desktop successfully. Click “Sign in to GitHub.com”. It will automatically open a web page. Don’t have a GitHub account? Click “Create an account” or you can follow Create an Account on GitHub to register a new account and then go back. After you sign in, this web page will want to open GitHub Desktop. Click “Open”. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#login-and-authorize-github-desktop",
+    "relUrl": "/docs/git/github_desktop/#login-and-authorize-github-desktop"
+  },"73": {
+    "doc": "Install GitHub Desktop",
+    "title": "First time configure your Name and Email",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#first-time-configure-your-name-and-email-1",
+    "relUrl": "/docs/git/github_desktop/#first-time-configure-your-name-and-email-1"
+  },"74": {
+    "doc": "Install GitHub Desktop",
+    "title": "Done",
+    "content": "Click “Finish”. You should now have a workable GitHub Desktop on Windows. ",
+    "url": "http://localhost:4000/docs/git/github_desktop/#done",
+    "relUrl": "/docs/git/github_desktop/#done"
+  },"75": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "A Guide for HOP, HOS or TT",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#a-guide-for-hop-hos-or-tt",
+    "relUrl": "/docs/hoporhos/guide/#a-guide-for-hop-hos-or-tt"
+  },"76": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Table of contents",
+    "content": ". | Preparation | Clone or Download . | Git Command Line | GitHub Desktop | . | Follow the document and do your work | Submit your work | . This guide is for any courses’ HOP (Hands-On Practice), HOS (Hands-On Skill) or TT (Technology Tool) assignments that are on GitHub. | HOP: For undergraduates | HOS: For graduates | TT: For doctorates | . The unique difference is the course number. I’ll use 624 as an example to show you how to do your HOP, HOS or TT (please remember to use your correct course number instead of 624). ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#table-of-contents",
+    "relUrl": "/docs/hoporhos/guide/#table-of-contents"
+  },"77": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Preparation",
+    "content": "The first thing you need to consider is finding a place to store your HOP, HOS or TT repositories. There is a recommend way to organize your 10 weeks of course content. Please take a look at the guide and create the necessary folders for the course. ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#preparation",
+    "relUrl": "/docs/hoporhos/guide/#preparation"
+  },"78": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Clone or Download",
+    "content": "In this part, you have 2 ways to clone a GitHub repository to your local machine. The first one is Git Command Line and the other is GitHub Desktop. You can choose whichever one you’re comfortable with. Notice: If you have no experience with Git or GitHub, GitHub Desktop would be a better choice. ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#clone-or-download",
+    "relUrl": "/docs/hoporhos/guide/#clone-or-download"
+  },"79": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Git Command Line",
+    "content": "In your local machine, open the Terminal (for Mac) or Command Prompt (CMD for Windows). Type the following commands to clone the repository (download the repository to your local machine): . Don’t have Git command? Please follow Install Git Command to install it. | cd {Your course path}/624/Module01 (Assume you’re doing the 1st week’s HOP, HOS or TT. cd Module02 if you’re doing the 2nd week’s assignment.) . | git clone [URL] (to download this GitHub repository to your local machine, replace [URL] with the actual url of your repository. Use the copy icon to copy the repository [URL]. | cd {repository name} (Your repository name will be different from mine, you need to replace {repository name} with the actual repository name you just downloaded.) . | . ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#git-command-line",
+    "relUrl": "/docs/hoporhos/guide/#git-command-line"
+  },"80": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "GitHub Desktop",
+    "content": ". | Open your GitHub repository web page and click the “Code” button. You’ll see “Open with GitHub Desktop”. Click that. | If you have not installed GitHub Desktop, please follow Install GitHub Desktop to install it. | After you install it, reclick “Open with GitHub Desktop”. GitHub Desktop will automaticlly pop up. Click “Choose” to select a correct local path to store it. Then click “Clone”. | . ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#github-desktop",
+    "relUrl": "/docs/hoporhos/guide/#github-desktop"
+  },"81": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Follow the document and do your work",
+    "content": "You’ll see some word document(s) or pdf file(s) inside the repository. Follow the instructions and complete your work. ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#follow-the-document-and-do-your-work",
+    "relUrl": "/docs/hoporhos/guide/#follow-the-document-and-do-your-work"
+  },"82": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "Submit your work",
+    "content": "After completing your work, follow Submit your work to submit your work to GitHub. ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/#submit-your-work",
+    "relUrl": "/docs/hoporhos/guide/#submit-your-work"
+  },"83": {
+    "doc": "A Guide for HOP/HOS/TT",
+    "title": "A Guide for HOP/HOS/TT",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos/guide/",
+    "relUrl": "/docs/hoporhos/guide/"
+  },"84": {
+    "doc": "Install Homebrew",
+    "title": "Install Homebrew",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/tools/homebrew/",
+    "relUrl": "/docs/tools/homebrew/"
+  },"85": {
+    "doc": "Install Homebrew",
+    "title": "Table of contents",
+    "content": ". | Check if Homebrew is installed | Installing | Setting environment variable | Updating | FAQs | Tips &amp; Cheatsheets . | Brew Help | Brew Update | Brew Repositories | Brew Cask | Brew Search, Install, Remove | Brew Cleanup | . | . Homebrew calls itself the missing package manager for macOS and is an essential tool for Mac developers. ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#table-of-contents",
+    "relUrl": "/docs/tools/homebrew/#table-of-contents"
+  },"86": {
+    "doc": "Install Homebrew",
+    "title": "Check if Homebrew is installed",
+    "content": "To see if you already have Homebrew installed and to check the installed version, run the following commands in a terminal: . $ brew --version # Display the version of Homebrew. If you have Homebrew installed, skip the Installing section. ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#check-if-homebrew-is-installed",
+    "relUrl": "/docs/tools/homebrew/#check-if-homebrew-is-installed"
+  },"87": {
+    "doc": "Install Homebrew",
+    "title": "Installing",
+    "content": "Before you can run Homebrew you need to have the Command Line Tools for Xcode installed. It include compilers and other tools that will allow you to build things from source, and if you are missing this it’s available through the App Store &gt; Updates. You can also install it from the terminal by running the following: . $ sudo xcode-select --install . To install Homebrew run the following in a terminal: . $ /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\" . This command will download and execute Homebrew’s installation script. The script explains what it will do and then pauses before it does it. Please follow the steps on the screen carefully. The content of this section mainly comes from here. If you do not manually install Xcode Command Line Tools, the following process may occur during the installation process: . | If it asks you to press RETURN to continue, then press the RETURN (Enter key on the keyboard). | Then choose Install. | . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#installing",
+    "relUrl": "/docs/tools/homebrew/#installing"
+  },"88": {
+    "doc": "Install Homebrew",
+    "title": "Setting environment variable",
+    "content": "If your system is macOS 10.14 Mojave and newer, you can skip this section. To make the Homebrew-installed programs available in your shell, you need to add your Homebrew installation location to your $PATH. For older versions of macOS, do the following: . You change your path by adding /usr/local/bin to your PATH environment variable. This can be done on a per-user basis by adjusting PATH in your ~/.bash_profile. To do this, run: . $ echo 'PATH=\"/usr/local/bin:$PATH\"' &gt;&gt; ~/.bash_profile $ source ~/.bash_profile . If you’re using zsh, you should do this for ~/.zshrc in addition to ~/.bash_profile. Alternatively, you can also insert /usr/local/bin before the first line of /etc/paths to change the global default paths order, for all users and all major shells. An admin password will be required if you modify the file. Then, to be able to use brew you need to start a new terminal session. After that you should make sure everything is working by running: . $ brew doctor # Check system for potential problems. If everything is good, you should see no warnings, and a message that you are “ready to brew!”. The content of this section mainly comes from here. ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#setting-environment-variable",
+    "relUrl": "/docs/tools/homebrew/#setting-environment-variable"
+  },"89": {
+    "doc": "Install Homebrew",
+    "title": "Updating",
+    "content": "To update all package definitions (formulae) and Homebrew itself, run the following commands in your terminal twice: . $ brew update . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#updating",
+    "relUrl": "/docs/tools/homebrew/#updating"
+  },"90": {
+    "doc": "Install Homebrew",
+    "title": "FAQs",
+    "content": "If you encounter problems during installation or use, please try to solve the problem by doing your own research first. If you really can’t solve it, you can ask your TA for help. If the problem you’re having is a bug with Homebrew itself, please read Troubleshooting in the official documentation. If you have doubts in the process of using Homebrew or do not know what commands to use or how to operate, please read the FAQ in Homebrew’s official documentation. Please do not run Homebrew with administrator privileges (sudo/su). Homebrew itself is trusted, but scripts that Homebrew runs when installing other packages should not be trusted. Details can be found here. ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#faqs",
+    "relUrl": "/docs/tools/homebrew/#faqs"
+  },"91": {
+    "doc": "Install Homebrew",
+    "title": "Tips &amp; Cheatsheets",
+    "content": "This section is not intended as a complete documented list of all commands and for that you should rather visit the official brew documentation page. The content of this section mainly comes from here. ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#tips--cheatsheets",
+    "relUrl": "/docs/tools/homebrew/#tips--cheatsheets"
+  },"92": {
+    "doc": "Install Homebrew",
+    "title": "Brew Help",
+    "content": "It is important to understand how to get help on brew after you have successfully installed it. The following commands intent to provide assistance on how to use the brew command on macOS. # Display the version of Homebrew. $ brew --version # Print Help Information $ brew help # Print Help Info for a brew command $ brew help &lt;sub-command&gt; # Check system for potential problems. $ brew doctor . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-help",
+    "relUrl": "/docs/tools/homebrew/#brew-help"
+  },"93": {
+    "doc": "Install Homebrew",
+    "title": "Brew Update",
+    "content": "Part of the power of Homebrew is it makes it easy for you to keep your applications up to date, and others on a specific version. These set of commands are used to update Homebrew itself, and also the applications that was installed with it. # Fetch latest version of Homebrew and formula $ brew update # Show formulae with an updated version available $ brew outdated # Upgrade all outdated and unpinned brews $ brew upgrade # Upgrade only the specified brew $ brew upgrade &lt;formula&gt; # Prevent the specified formulae from being upgraded $ brew pin &lt;formula&gt; # Allow the specified formulae to be upgraded. $ brew unpin &lt;formula&gt; . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-update",
+    "relUrl": "/docs/tools/homebrew/#brew-update"
+  },"94": {
+    "doc": "Install Homebrew",
+    "title": "Brew Repositories",
+    "content": "It is possible to add additional repositories to Homebrew by making use of the brew tap command. This allows you to install additional applications that does not form part of the default set of repositories. # List all the current tapped repositories (taps) $ brew tap # Tap a formula repository from Github using https for tap https://github.com/user/homebrew-repo $ brew tap &lt;user/repo&gt; # Tap a formula repository from the specified URL $ brew tap &lt;user/repo&gt; &lt;URL&gt; # Remove the given tap from the repository $ brew untap &lt;user/repo&gt; . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-repositories",
+    "relUrl": "/docs/tools/homebrew/#brew-repositories"
+  },"95": {
+    "doc": "Install Homebrew",
+    "title": "Brew Cask",
+    "content": "Homebrew Cask provides a friendly CLI workflow for the administration of macOS applications distributed as binaries. # Tap the Cask repository from Github. $ brew tap homebrew/cask # List all the installed casks . $ brew cask list # Search all known casks based on the substring text. $ brew search &lt;text&gt; # Install the given cask. $ brew cask install &lt;cask&gt; # Reinstalls the given Cask $ brew cask reinstall &lt;cask&gt; # Uninstall the given cask. $ brew cask uninstall &lt;cask&gt; . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-cask",
+    "relUrl": "/docs/tools/homebrew/#brew-cask"
+  },"96": {
+    "doc": "Install Homebrew",
+    "title": "Brew Search, Install, Remove",
+    "content": "The following commands are used to search, list and install the different applications and tools that are available within the Homebrew repository. # List all the installed formulae. $ brew list # Display all locally available formulae for brewing. $ brew search # Perform a substring search of formulae names for brewing. $ brew search &lt;text&gt; # Display information about the formula. $ brew info &lt;formula&gt; # Install the formula. $ brew install &lt;formula&gt; # Uninstall the formula. $ brew uninstall &lt;formula&gt; . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-search-install-remove",
+    "relUrl": "/docs/tools/homebrew/#brew-search-install-remove"
+  },"97": {
+    "doc": "Install Homebrew",
+    "title": "Brew Cleanup",
+    "content": "Remove stale lock files and outdated downloads for formulae and casks, and remove old versions of installed formulae. # Remove older versions of installed formulae. $ brew cleanup # Remove older versions of specified formula. $ brew cleanup &lt;formula&gt; # Display all formula that will be removed (dry run) $ brew cleanup -n . ",
+    "url": "http://localhost:4000/docs/tools/homebrew/#brew-cleanup",
+    "relUrl": "/docs/tools/homebrew/#brew-cleanup"
+  },"98": {
+    "doc": "HOP, HOS and TT",
+    "title": "HOP, HOS and TT",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos",
+    "relUrl": "/docs/hoporhos"
+  },"99": {
+    "doc": "Home",
+    "title": "CityU STC TA Center",
+    "content": "Get Started . Welcome to the CityU STC TA Center. We’re here to share technical knowledge and help solve your problems quickly. In addition, we hope you learn something from here as well. This website is hosted on GitHub Pages and is open to anyone - not just CityU TAs. If you want to contribute or find something wrong, please read more about becoming a contributor in our GitHub repo. Thank you for your time! . ",
+    "url": "http://localhost:4000/#cityu-stc-ta-center",
+    "relUrl": "/#cityu-stc-ta-center"
+  },"100": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  },"101": {
+    "doc": "Install Git",
+    "title": "Table of contents",
+    "content": ". | Install Git on macOS . | Section 1: Checking your version of Git | Section 2: Using brew package manager to install Git | Section 3: First-time Git setup | . | Install Git on Windows . | Section 1: Installing Git for Windows | Section 2: Testing the Git installation | Section 3: First-time Git setup | . | . ",
+    "url": "http://localhost:4000/docs/git/install/#table-of-contents",
+    "relUrl": "/docs/git/install/#table-of-contents"
+  },"102": {
+    "doc": "Install Git",
+    "title": "Install Git on macOS",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/install/#install-git-on-macos",
+    "relUrl": "/docs/git/install/#install-git-on-macos"
+  },"103": {
+    "doc": "Install Git",
+    "title": "Section 1: Checking your version of Git",
+    "content": ". | Open a new Terminal to type and run the following command to see if you already have Git installed. This will also check the installed version: . $ git --version . | If you got an error and Git is not recognized by your machine, then follow Section 2 to install it. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-1-checking-your-version-of-git",
+    "relUrl": "/docs/git/install/#section-1-checking-your-version-of-git"
+  },"104": {
+    "doc": "Install Git",
+    "title": "Section 2: Using brew package manager to install Git",
+    "content": ". | There are several options for installing Git on macOS. Note that any non-source distributions are provided by third parties and may not be up to date with the latest source release. In this tutorial, we will use Homebrew, a package manager in macOS, to install Git. If you don’t like to use Homebrew, you can follow https://git-scm.com/download/mac to install Git in another way. Note: if you encounter problems while installing Git using another way, the TA may not be able to help solve your problem. | Follow the steps in the tutorial to install Homebrew if you don’t already have it. For more information about what Homebrew can do, visit the following link: https://brew.sh/. | Once Homebrew is installed, type the following in the terminal to update Homebrew and install Git. $ brew update $ brew install git . | Please re-execute Section 1 to verify the installation is successful. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-2-using-brew-package-manager-to-install-git",
+    "relUrl": "/docs/git/install/#section-2-using-brew-package-manager-to-install-git"
+  },"105": {
+    "doc": "Install Git",
+    "title": "Section 3: First-time Git setup",
+    "content": ". | First of all, if you encounter any problems in this section, please read the official GitHub tutorial first, which can solve most of your problems. https://docs.github.com/en/authentication/connecting-to-github-with-ssh . | The first thing you should do when you install Git is set your username and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating: . $ git config --global user.name \"&lt;username&gt;\" $ git config --global user.email &lt;email&gt; . Note: replace &lt;username&gt; to your GitHub username, and &lt;email&gt; to the email address you used to register GitHub. If you want to know more about the Git config command, you can see here: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup. | Please read this tutorial to generate SSH keys. Print the public key, then please select and copy the output. $ cat ~/.ssh/id_&lt;algorithm&gt;.pub . Please replace &lt;algorithm&gt; with a specific algorithm, such as rsa, ecdsa, or ed25519. It depends on what algorithm you used to generate the SSH key. | Open the GitHub website. In the upper-right corner of any GitHub page, click your profile photo, then click Settings. | Then select the “SSH and GPG keys” section along the left-hand side. From there, click the “New SSH key” button. | In the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal Mac, you might call this key “Personal MacBook Air”. | Paste the contents of the public-key file you coped in this section step 3 into the “Key” field and click “Add key”. | If prompted, confirm your GitHub password. | To test your SSH connection, enter the following in your terminal: . $ ssh -T git@github.com # You may see a warning like this: The authenticity of host 'github.com (IP ADDRESS)' can't be established. RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8. Are you sure you want to continue connecting (yes/no)? . | Verify that the fingerprint in the message you see matches GitHub’s SSH key fingerprints. If it does, then type yes and press enter: . Hi your_GitHub_username! You've successfully authenticated, but GitHub does not provide shell access. | Verify that the resulting message contains your GitHub username. If you receive a “permission denied” message, see “Error: Permission denied (publickey)”. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-3-first-time-git-setup",
+    "relUrl": "/docs/git/install/#section-3-first-time-git-setup"
+  },"106": {
+    "doc": "Install Git",
+    "title": "Install Git on Windows",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/install/#install-git-on-windows",
+    "relUrl": "/docs/git/install/#install-git-on-windows"
+  },"107": {
+    "doc": "Install Git",
+    "title": "Section 1: Installing Git for Windows",
+    "content": ". | Visit https://git-scm.com/download/win and click on the first link: “Click here to download”. | Open the file that was downloaded. | Choose yes to allow the Git installation on your PC. | Go through the installation and choose the default options. | For this step, we will choose the last option to give us extra commands to use. | For the rest of the installation, choose the default options. | Uncheck “View Release Notes” because we do not need it. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-1-installing-git-for-windows",
+    "relUrl": "/docs/git/install/#section-1-installing-git-for-windows"
+  },"108": {
+    "doc": "Install Git",
+    "title": "Section 2: Testing the Git installation",
+    "content": "Once the installation is completed, open cmd. | In the search bar, type cmd and choose Command Prompt. | In the cmd window, type git --version. You should see Git version 2.27.0 or greater. | Note: If you get the following error: . Then, you need to add the PATH of Git into the Environment Variables. | In the cmd window, type “where git”: . | Copy the first line and add it to the environment variables. To open the environment variables in the search bar, type environment variables and choose “Edit the system environment variables”. | Choose Environment Variables. | In the System Variables, choose Path, then select the Edit Button. | Choose New, then Paste the Git location that you copied from the cmd window. | Close the cmd window, then open it one more time and type git --version to make sure that Git installed successfully. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-2-testing-the-git-installation",
+    "relUrl": "/docs/git/install/#section-2-testing-the-git-installation"
+  },"109": {
+    "doc": "Install Git",
+    "title": "Section 3: First-time Git setup",
+    "content": ". | First of all, if you encounter any problems in this section, please read the official GitHub tutorial first, which can solve most of your problems. https://docs.github.com/en/authentication/connecting-to-github-with-ssh . | Open PowerShell or Git Bash. If you don’t know what a terminal is, check out the tutorial What’s the Terminal? The first thing you should do when you install Git is set your username and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating: . $ git config --global user.name \"&lt;username&gt;\" $ git config --global user.email &lt;email&gt; . Note: replace &lt;username&gt; to your GitHub username, and &lt;email&gt; to the email address you used to register GitHub. If you want to know more about the Git config command, you can see here: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup. | Please read this tutorial to generate SSH keys. Print the public key, then please select and copy the output. $ cat ~/.ssh/id_&lt;algorithm&gt;.pub . Please replace &lt;algorithm&gt; with a specific algorithm, such as rsa, ecdsa, or ed25519. It depends on what algorithm you used to generate the SSH key. | Open the GitHub website. In the upper-right corner of any GitHub page, click your profile photo, then click Settings. | Then select the “SSH and GPG keys” section along the left-hand side. From there, click the “New SSH key” button. | In the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal Mac, you might call this key “Personal MacBook Air”. | Paste the contents of the public-key file you coped in this section step 3 into the “Key” field and click “Add key”. | If prompted, confirm your GitHub password. | To test your SSH connection, enter the following in your terminal: . $ ssh -T git@github.com # You may see a warning like this: The authenticity of host 'github.com (IP ADDRESS)' can't be established. RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8. Are you sure you want to continue connecting (yes/no)? . | Verify that the fingerprint in the message you see matches GitHub’s SSH key fingerprints. If it does, then type yes and press enter: . Hi your_GitHub_username! You've successfully authenticated, but GitHub does not provide shell access. | Verify that the resulting message contains your GitHub username. If you receive a “permission denied” message, see “Error: Permission denied (publickey)”. | . ",
+    "url": "http://localhost:4000/docs/git/install/#section-3-first-time-git-setup-1",
+    "relUrl": "/docs/git/install/#section-3-first-time-git-setup-1"
+  },"110": {
+    "doc": "Install Git",
+    "title": "Install Git",
+    "content": " ",
+    "url": "http://localhost:4000/docs/git/install/",
+    "relUrl": "/docs/git/install/"
+  },"111": {
+    "doc": "Install Keil IDE",
+    "title": "Install Keil µVision 5 ARMs assembly IDE",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#install-keil-%C2%B5vision-5-arms-assembly-ide",
+    "relUrl": "/docs/environment/install_keil/#install-keil-µvision-5-arms-assembly-ide"
+  },"112": {
+    "doc": "Install Keil IDE",
+    "title": "Before You Start",
+    "content": ". | Version numbers may not match with the most current version at the time of writing. If given the option to choose between stable release (long-term support) or most recent, please select the stable release rather than the beta-testing version. | This tutorial targets Windows users and macOS users. | There might be subtle discrepancies along with the steps. Please use your best judgment while going through this cookbook-style tutorial to complete each step. | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#before-you-start",
+    "relUrl": "/docs/environment/install_keil/#before-you-start"
+  },"113": {
+    "doc": "Install Keil IDE",
+    "title": "Table of contents",
+    "content": ". | For macOS Users | For Windows Users | Install the Pack You Need | FAQs . | error: L6050U: The code size | How can I see the output in the simulator? | Error: L6218E: Undefined symbol Image | warning: long long is incompatible with C++98 | . | Limit | Resource | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#table-of-contents",
+    "relUrl": "/docs/environment/install_keil/#table-of-contents"
+  },"114": {
+    "doc": "Install Keil IDE",
+    "title": "For macOS Users",
+    "content": "Unfortunately, Keil® MDK is not available for Mac devices at the time of creating this document. For this reason, we have deployed an AWS server that hosts this software. To access this server, download the Microsoft Remote Desktop from the App Store. Request the IP address, and your username and password from the instructor and TA for the entire quarter. ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#for-macos-users",
+    "relUrl": "/docs/environment/install_keil/#for-macos-users"
+  },"115": {
+    "doc": "Install Keil IDE",
+    "title": "For Windows Users",
+    "content": "Keil® Microcontroller Development Kit (MDK) is the most comprehensive software development solution for Arm®-based microcontrollers and includes all components that you need to create, build, and debug embedded applications. Additional information can be found in the official website here. This software is provided by ARM. To download the Development Kit, browse here and click on the Download MDK. You will be required to fill in the form and follow the instructions to install the latest version of Keil µVision as shown below: . Keil will collect user data during the download and installation process, please fill in as you like. In the Do you want to install this device software? dialog box that pops up during the installation process, please check the Always trust software from \"ARM Ltd\" (A). option, and click Install. When you finish the installation, Keil’s Pack Installer will pop up automatically. Please wait for all loading/upgrades at the bottom of the page to complete. When there is no progress bar or Ready is displayed, you can close the window. If you have successfully installed Keil, running Keil will have the following display. ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#for-windows-users",
+    "relUrl": "/docs/environment/install_keil/#for-windows-users"
+  },"116": {
+    "doc": "Install Keil IDE",
+    "title": "Install the Pack You Need",
+    "content": "The following steps will demonstrate how to install the packages you need through Keil’s own package installer. This section will take the installation of the STM32F4 device as an example. | First, you need to find and open the package installer that comes with Keil. There are two ways: . | Open Keil and find and click the Pack Installer button in the main interface. | Find Keil_v5 installation path. Usually in the path C:/Keil_v5/UV4/. Open PackInstaller.exe. | . | Waiting. | Search the pack you need. Here use STM32F411 as an example. | Click STM32F4 Series, then install Keil::STM32F4xx_DFP. | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#install-the-pack-you-need",
+    "relUrl": "/docs/environment/install_keil/#install-the-pack-you-need"
+  },"117": {
+    "doc": "Install Keil IDE",
+    "title": "FAQs",
+    "content": " ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#faqs",
+    "relUrl": "/docs/environment/install_keil/#faqs"
+  },"118": {
+    "doc": "Install Keil IDE",
+    "title": "error: L6050U: The code size",
+    "content": "See section Limit. ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#error-l6050u-the-code-size",
+    "relUrl": "/docs/environment/install_keil/#error-l6050u-the-code-size"
+  },"119": {
+    "doc": "Install Keil IDE",
+    "title": "How can I see the output in the simulator?",
+    "content": ". | After you have created the project. Click on Manage Run-Time Environment. | Expand and select Compiler &gt; I/O &gt; STDOUT, and change Breakpoint to ITM. | After successfully compiling the code, click Start/Stop Debug Session. | After entering the debug session, in the View above, find Serial Windows, and select Debug (printf) Viewer. | After completing the above operations, you can see that this Debug (printf) Viewer window appears in the lower right corner. | Execute your code and check the Debug (printf) Viewer window, if there is anything in the code that prints to stdout like cout or printf, it will be shown in this window. | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#how-can-i-see-the-output-in-the-simulator",
+    "relUrl": "/docs/environment/install_keil/#how-can-i-see-the-output-in-the-simulator"
+  },"120": {
+    "doc": "Install Keil IDE",
+    "title": "Error: L6218E: Undefined symbol Image",
+    "content": "Click on Options for Target.... Select Linker, click the ellipsis (...) next to Scatter File, navigate to .\\RTE\\Device\\[the device you are currently using]\\ in your current project directory, there is a file of type .sct, select it. If not, please contact your TA to find other solutions. ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#error-l6218e-undefined-symbol-image",
+    "relUrl": "/docs/environment/install_keil/#error-l6218e-undefined-symbol-image"
+  },"121": {
+    "doc": "Install Keil IDE",
+    "title": "warning: long long is incompatible with C++98",
+    "content": "If you meet with warning: long long is incompatible with C++98 issue, please check this link https://www.keil.com/support/man/docs/armcc/armcc_chr1359124956849.htm and try to solve it. Please note that debugging is an important skill. Writing code is the easiest part of software development. ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#warning-long-long-is-incompatible-with-c98",
+    "relUrl": "/docs/environment/install_keil/#warning-long-long-is-incompatible-with-c98"
+  },"122": {
+    "doc": "Install Keil IDE",
+    "title": "Limit",
+    "content": "Since we are downloading the free Keil Lite version of the MDK, there are limitations. A full list of limitations can be found here. | If you get an error similar to the following during use, it is due to the limitation of the free version. The free version of Debugger, Compiler, Linker, Libraries, and Utilities only supports 32KBytes code size.\\Objects\\lite.axf: error: L6050U: The code size of this image (84902 bytes) exceeds the maximum allowed for this version of the linker. There is no solution to this error. But in general, C++ will use more space than C, you can try to use C code. | The full current device support list is here, and the full legacy device list is here. But if you can’t find chips of ARM Cortex-A series, ARM SecurCore®, ARM Cortex-R series, in the device list, it is due to the limitation of the free version. If you are looking for a chip that supports double floating-point precision that can be debugged in the simulator, unfortunately, we TAs have no solution yet. Although some chips with the -DP suffix support double floating-point precision, there are various issues in the simulator. For example, the error No CPU DLL specified under 'Options for Target - Debug' ! or Error: Target Driver not specified. Debugger aborted ! appears when starting a debug session; there is no read/write permission during running; even double-precision floating-point numbers are not passed to the FPU during runtime. | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#limit",
+    "relUrl": "/docs/environment/install_keil/#limit"
+  },"123": {
+    "doc": "Install Keil IDE",
+    "title": "Resource",
+    "content": ". | Keil Downloads: https://www.keil.com/download/product/ | MDK5 Device List: https://www.keil.com/dd2/ | Legacy Device List: https://www.keil.com/dd/ | Compare MDK Editions: https://www2.keil.com/mdk5/selector | µVision® Debugger: https://www2.keil.com/mdk5/debug/ | . ",
+    "url": "http://localhost:4000/docs/environment/install_keil/#resource",
+    "relUrl": "/docs/environment/install_keil/#resource"
+  },"124": {
+    "doc": "Install Keil IDE",
+    "title": "Install Keil IDE",
+    "content": " ",
+    "url": "http://localhost:4000/docs/environment/install_keil/",
+    "relUrl": "/docs/environment/install_keil/"
+  },"125": {
+    "doc": "Installing Kali Linux using VirtualBox",
+    "title": "Table of contents",
+    "content": ". | Prepare | Install | . ",
+    "url": "http://localhost:4000/docs/tools/kali_virtualbox/#table-of-contents",
+    "relUrl": "/docs/tools/kali_virtualbox/#table-of-contents"
+  },"126": {
+    "doc": "Installing Kali Linux using VirtualBox",
+    "title": "Prepare",
+    "content": ". | This tutorial is a guide on how to install Kali Linux in VirtualBox. If you have not installed VirtualBox, please refer to here. This tutorial is available for macOS and Windows. | Open the Kali Linux official website. Click the DOWNLOAD or GET KALI button. Select the Virtual Machines. Choose the image you need. If your course does not have specific version requirements, it is recommended that you download a 64-bit system. | . ",
+    "url": "http://localhost:4000/docs/tools/kali_virtualbox/#prepare",
+    "relUrl": "/docs/tools/kali_virtualbox/#prepare"
+  },"127": {
+    "doc": "Installing Kali Linux using VirtualBox",
+    "title": "Install",
+    "content": ". | After you have downloaded the image, the most convenient way is to double-click to open it. If your computer associates the opening method of related files when installing VirtualBox, the following interface will be displayed after double-clicking (screenshot of the interface is for macOS, but a similar interface with the same options appears on Windows). If you cannot double-click to open it, please click the Import button on the homepage of VirtualBox. Click the Expert Mode button below. Then find the Kali Linux ova file you downloaded in your Local File System. | Please Perform basic configuration of the virtual machine or keep the default options, and click Import. Give it a minute or so, until the importation should be complete. | If the import is successful, you will see a new item added in the VirtualBox homepage. The item may have a different name. | Start Kali Linux for the first time may show the Boost menu, select the first option, and press Enter to make it install by default. Wait for a while and you can see the Kali login interface, the login user name is kali, and the password is kali. You can close the alerts. | . ",
+    "url": "http://localhost:4000/docs/tools/kali_virtualbox/#install",
+    "relUrl": "/docs/tools/kali_virtualbox/#install"
+  },"128": {
+    "doc": "Installing Kali Linux using VirtualBox",
+    "title": "Installing Kali Linux using VirtualBox",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/kali_virtualbox/",
+    "relUrl": "/docs/tools/kali_virtualbox/"
+  },"129": {
+    "doc": "Install MongoDB",
+    "title": "Install MongoDB",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/mongodb/",
+    "relUrl": "/docs/database/mongodb/"
+  },"130": {
+    "doc": "Install MongoDB",
+    "title": "Table of contents",
+    "content": ". | Detect if MongoDB is installed | For Windows Users . | Install MongoDB Community Edition | Configure Environment Variables | Install Tools . | Install mongosh | Install MongoDB Database Tools | . | . | For macOS Users . | Install MongoDB Community Edition | Run MongoDB Community Edition . | Connect and Use MongoDB | . | Using the MongoDB Database Tools | . | Resources | . | Version numbers may not match with the most current version at the time of writing. If given the option to choose between stable release (long-term support) or most recent, please select the stable release rather than the beta-testing version. | There might be subtle discrepancies along with the steps. Please use your best judgment while going through this cookbook-style tutorial to complete each step. | . ",
+    "url": "http://localhost:4000/docs/database/mongodb/#table-of-contents",
+    "relUrl": "/docs/database/mongodb/#table-of-contents"
+  },"131": {
+    "doc": "Install MongoDB",
+    "title": "Detect if MongoDB is installed",
+    "content": "Open a terminal, if you don’t know what a terminal is, read the tutorial What’s the Terminal?. Enter the command mongo or mongosh. If you have MongoDB installed, you will enter the MongoDB shell. Press Ctrl + C (or Command + C in macOS) to exit the shell. If you are using Windows, it is possible that the command execution failed because your environment variables were not configured correctly. Please check your File Explorer to see if the path C:\\Program Files\\MongoDB\\Server\\5.0\\bin\\ exists. If exists, skip to the Configure Environment Variables section to configure your environment variables. If not, proceed to install following the tutorial. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#detect-if-mongodb-is-installed",
+    "relUrl": "/docs/database/mongodb/#detect-if-mongodb-is-installed"
+  },"132": {
+    "doc": "Install MongoDB",
+    "title": "For Windows Users",
+    "content": "This section is based on the official MongoDB documentation. You can also watch this video to install in Windows 10. This tutorial only applies to 64-bit versions of Windows Server 2019 / Windows 10 / Windows Server 2016 on x86_64 architecture. For other Windows platforms, please do your personal research first, and if you really can’t find a solution ask your TA to find a solution with you. Disable Hyper-V if you want to install MongoDB on Windows using VirtualBox. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#for-windows-users",
+    "relUrl": "/docs/database/mongodb/#for-windows-users"
+  },"133": {
+    "doc": "Install MongoDB",
+    "title": "Install MongoDB Community Edition",
+    "content": "Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. | Download the MongoDB Community .msi installer from the MongoDB Download Center. Please keep the .msi installer after installation, this file is also used for uninstallation. | In the Version dropdown, select the newest version of MongoDB to download. (As of Feb 4, 2022, the latest version is 5.0.6.) | In the Platform dropdown, select Windows. | In the Package dropdown, select msi. | Click Download. | . | Run the MongoDB installer. For example, from the Windows Explorer/File Explorer: . | Go to the directory where you downloaded the MongoDB installer (.msi file). By default, this is your Downloads directory. | Double-click the .msi file. | . | Follow the MongoDB Community Edition installation wizard. The wizard steps you through the installation of MongoDB and MongoDB Compass. | Choose Setup Type . You can choose either the Complete or Custom setup type. Please select Complete. The Complete setup option installs MongoDB and the MongoDB tools to the default location. The Custom setup option allows you to specify which executables are installed and where. | Service Configuration . Starting in MongoDB 4.0, you can set up MongoDB as a Windows service during the install or just install the binaries. Here let’s set it as a Windows service, and the MongoDB service will be started after successful installation. | Select Install MongoD as a Service. | Select Run the service as Network Service user. | Other options are kept as default. | Click Next. | . If you choose Run the service as a local or domain user, in order to use it in your current Windows local account, you need to keep the Account Domain as .; Account Name as your current account name; Account Password as your the password for the current account (yes, the username and password you use to log in to Windows). For a detailed explanation of these options, please read here and the official documentation. | (Optional but recommended) To have the wizard install MongoDB Compass, select Install MongoDB Compass (Default). MongoDB Compass is a graphical user interface (GUI) for MongoDB. | When ready, click Install. | During the installation process, some prompts and related processing methods may appear as follows: . | Just a reminder that you will need to restart your computer after the installation is complete, click OK. | This prompt may be that you have installed MongoDB and the MongoDB service is running. Here just check Close the applications and attempt to restart them., then click OK. | This prompts you to reboot. Please click Yes to restart your computer after making sure your other work (e.g. Word document, code being edited) is saved. | . | . | . ",
+    "url": "http://localhost:4000/docs/database/mongodb/#install-mongodb-community-edition",
+    "relUrl": "/docs/database/mongodb/#install-mongodb-community-edition"
+  },"134": {
+    "doc": "Install MongoDB",
+    "title": "Configure Environment Variables",
+    "content": "Once installed, open a new terminal and run mongo again. If you get an error like the one below, it means you didn’t set the environment variable. To exit mongo, press Ctrl + C. # cmd 'mongo' is not recognized as an internal or external command, operable program or batch file. # PowerShell mongo : The term 'mongo' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. # Git Bash bash: mongo: command not found # Z shell zsh: command not found: mongo . Follow this tutorial to add a C:\\Program Files\\MongoDB\\Server\\5.0\\bin\\ value to your PATH environment variable. After you set the PATH environment variable, please open a new terminal, and run mongo again. If you did all the steps correctly, you can enter the MongoDB shell. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#configure-environment-variables",
+    "relUrl": "/docs/database/mongodb/#configure-environment-variables"
+  },"135": {
+    "doc": "Install MongoDB",
+    "title": "Install Tools",
+    "content": "Install mongosh . This section is based on the official MongoDB documentation . The .msi installer does not include mongosh. | Open the MongoDB Shell download page: MongoDB Download Center . | In the Platform dropdown, select Windows 64-bit (8.1+) (The first option, without the (MSI) suffix). | Make sure the Package item shows zip and not msi. | Click Download. | . | Once the download is complete, open or extracts the zip archive. Extract the two executable files (.exe) in mongosh-***/bin/ in the zip file to the bin directory of the MongoDB installation directory, which is located in C:\\Program Files\\MongoDB\\Server\\5.0\\bin\\ by default. | Open a new terminal and run mongosh. Open a new terminal and run mongosh. If you did all the steps correctly, you can enter the MongoDB shell. To exit the mongosh, press Ctrl + C twice. | . Install MongoDB Database Tools . This section is based on the official MongoDB documentation. The MongoDB Database Tools are a collection of command-line utilities for working with a MongoDB deployment. The Database Tools include binaries mongodump, mongorestore, bsondump, mongoimport, mongoexport, mongostat, mongotop, and mongofiles. If you are missing these tools, please refer to here to install them. Please use the Zip Archive method to install, put the files in the bin folder in the zip archive into the bin directory in the MongoDB installation path, which is located in C:\\Program Files\\MongoDB\\Server\\5.0\\bin\\ by default. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#install-tools",
+    "relUrl": "/docs/database/mongodb/#install-tools"
+  },"136": {
+    "doc": "Install MongoDB",
+    "title": "For macOS Users",
+    "content": "This section is based on the official MongoDB documentation. Use this tutorial to install MongoDB 5.0 Community Edition on macOS using the third-party Homebrew package manager. MongoDB 5.0 Community Edition supports macOS 10.14 or later. If you are using an older version of macOS, please install an older version of MongoDB Community. Please do your own research on how to install it, or use the version drop-down menu in the upper left corner of the current MongoDB document to select the documentation for that version. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#for-macos-users",
+    "relUrl": "/docs/database/mongodb/#for-macos-users"
+  },"137": {
+    "doc": "Install MongoDB",
+    "title": "Install MongoDB Community Edition",
+    "content": ". | macOS does not include the Homebrew brew package by default. First you need to install Homebrew, follow the steps of this tutorial to install Homebrew. Type the following in the terminal to update Homebrew. $ brew update . | Tap the MongoDB Homebrew Tap to download the official Homebrew formula for MongoDB and the Database Tools, by running the following command in your macOS Terminal: . $ brew tap mongodb/brew . If you have already done this for a previous installation of MongoDB, you can skip this step. | To install MongoDB, run the following command in your macOS Terminal application: . $ brew install mongodb-community@5.0 . Alternatively, you can specify a previous version of MongoDB if desired. You can also maintain multiple versions of MongoDB side by side in this manner. If you have previously installed an older version of the formula, you may encounter a ChecksumMismatchError. To resolve, see Troubleshooting ChecksumMismatchError. | . ",
+    "url": "http://localhost:4000/docs/database/mongodb/#install-mongodb-community-edition-1",
+    "relUrl": "/docs/database/mongodb/#install-mongodb-community-edition-1"
+  },"138": {
+    "doc": "Install MongoDB",
+    "title": "Run MongoDB Community Edition",
+    "content": "Follow these steps to run MongoDB Community Edition. These instructions assume that you are using the default settings. You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see ulimit settings for more information). | To run MongoDB (i.e. the mongod process) as a macOS service, run: . $ brew services start mongodb-community@5.0 . To stop a mongod running as a macOS service, use the following command as needed: . $ brew services stop mongodb-community@5.0 . | To run MongoDB (i.e. the mongod process) manually as a background process, run: . | For macOS running Intel processors: . $ mongod --config /usr/local/etc/mongod.conf --fork . | For macOS running on Apple M1 processors: . $ mongod --config /opt/homebrew/etc/mongod.conf --fork . To stop a mongod running as a background process, connect to the mongod using mongosh, and issue the shutdown command as needed. | . | . Both methods use the mongod.conf file created during the install. You can add your own MongoDB configuration options to this file as well. macOS Prevents mongod From Opening . macOS may prevent mongod from running after installation. If you receive a security error when starting mongod indicating that the developer could not be identified or verified, do the following to grant mongod access to run: . | Open System Preferences | Select the Security and Privacy pane. | Under the General tab, click the button to the right of the message about mongod, labelled either Open Anyway or Allow Anyway depending on your version of macOS. | . To verify that MongoDB is running, perform one of the following: . | If you started MongoDB as a macOS service: . $ brew services list . You should see the service mongodb-community listed as started. | If you started MongoDB manually as a background process: . $ ps aux | grep -v grep | grep mongod . You should see your mongod process in the output. | . You can also view the log file to see the current status of your mongod process: /usr/local/var/log/mongodb/mongo.log. Connect and Use MongoDB . To begin using MongoDB, connect mongosh to the running instance. From a new terminal, issue the following: . $ mongosh . macOS Prevents mongosh From Opening . macOS may prevent mongosh from running after installation. If you receive a security error when starting mongosh indicating that the developer could not be identified or verified, do the following to grant mongosh access to run: . | Open System Preferences | Select the Security and Privacy pane. | Under the General tab, click the button to the right of the message about mongosh, labelled either Open Anyway or Allow Anyway depending on your version of macOS. | . For information on CRUD (Create, Read, Update, Delete) operations, see: . | Insert Documents | Query Documents | Update Documents | Delete Documents | . ",
+    "url": "http://localhost:4000/docs/database/mongodb/#run-mongodb-community-edition",
+    "relUrl": "/docs/database/mongodb/#run-mongodb-community-edition"
+  },"139": {
+    "doc": "Install MongoDB",
+    "title": "Using the MongoDB Database Tools",
+    "content": "Starting in MongoDB 4.4.1, installing MongoDB via brew also installs the MongoDB Database Tools. The MongoDB Database Tools are a collection of command-line utilities for working with a MongoDB deployment, including data backup and import/export tools like mongoimport and mongodump as well as monitoring tools like mongotop. Once you have installed the MongoDB Server in the steps above, the Database Tools are available directly from the command line in your macOS Terminal application. For example you could run mongotop against your running MongoDB instance by invoking it in your macOS Terminal like so: . $ mongotop . It should start up, connect to your running mongod, and start reporting usage statistics. See the MongoDB Database Tools Documentation for usage information for each of the Database Tools. ",
+    "url": "http://localhost:4000/docs/database/mongodb/#using-the-mongodb-database-tools",
+    "relUrl": "/docs/database/mongodb/#using-the-mongodb-database-tools"
+  },"140": {
+    "doc": "Install MongoDB",
+    "title": "Resources",
+    "content": ". | What is MongoDB?: https://docs.mongodb.com/upcoming/#what-is-mongodb- | Install MongoDB: https://docs.mongodb.com/guides/server/install/ | Install MongoDB Community Edition on Windows: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ | Install MongoDB Community Edition on macOS: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/ | The MongoDB Database Tools Documentation: https://docs.mongodb.com/database-tools/ | . ",
+    "url": "http://localhost:4000/docs/database/mongodb/#resources",
+    "relUrl": "/docs/database/mongodb/#resources"
+  },"141": {
+    "doc": "Install MySQL",
+    "title": "Install MySQL",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/mysql/",
+    "relUrl": "/docs/database/mysql/"
+  },"142": {
+    "doc": "Install MySQL",
+    "title": "Table of contents",
+    "content": ". | Install MySQL on MacOS . | Prerequisite | Choose A Place on your Mac | Create docker-compose.yml | Generate your MySQL Container | Additional Commands | . | . ",
+    "url": "http://localhost:4000/docs/database/mysql/#table-of-contents",
+    "relUrl": "/docs/database/mysql/#table-of-contents"
+  },"143": {
+    "doc": "Install MySQL",
+    "title": "Install MySQL on MacOS",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/mysql/#install-mysql-on-macos",
+    "relUrl": "/docs/database/mysql/#install-mysql-on-macos"
+  },"144": {
+    "doc": "Install MySQL",
+    "title": "Prerequisite",
+    "content": ". | You’re using Mac . | You should have Docker installed (if not, please check this link to install, and get back) . | . ",
+    "url": "http://localhost:4000/docs/database/mysql/#prerequisite",
+    "relUrl": "/docs/database/mysql/#prerequisite"
+  },"145": {
+    "doc": "Install MySQL",
+    "title": "Choose A Place on your Mac",
+    "content": "Open your terminal and locate to any path you want. Create a new folder name it “mysql” . ",
+    "url": "http://localhost:4000/docs/database/mysql/#choose-a-place-on-your-mac",
+    "relUrl": "/docs/database/mysql/#choose-a-place-on-your-mac"
+  },"146": {
+    "doc": "Install MySQL",
+    "title": "Create docker-compose.yml",
+    "content": "Type or copy the following code into it. Please take care of the indents (If you encounter any issue of the syntax of YML, please use this Online YML Checker) to help you. [Optional] change the password to yours. version: '3.3' services: db: image: mysql:5.7 platform: linux/amd64 restart: always environment: MYSQL_DATABASE: 'db' # So you don't have to use root, but you can if you like MYSQL_USER: 'nonrootuser' # You can use whatever password you like MYSQL_PASSWORD: 'NonRootPassword' # Password for root access MYSQL_ROOT_PASSWORD: 'YourRootPassword' ports: # &lt;Port exposed&gt; : &lt; MySQL Port running inside container&gt; - '3306:3306' expose: # Opens port 3306 on the container - '3306' # Where our data will be persisted volumes: - my-db:/var/lib/mysql # Names our volume volumes: my-db: . ",
+    "url": "http://localhost:4000/docs/database/mysql/#create-docker-composeyml",
+    "relUrl": "/docs/database/mysql/#create-docker-composeyml"
+  },"147": {
+    "doc": "Install MySQL",
+    "title": "Generate your MySQL Container",
+    "content": "Open your terminal and switch to the path as same as your docker-compose.yml file. Type the following command. docker-compose up . If everything goes well, you would see a similar outputs like me. ",
+    "url": "http://localhost:4000/docs/database/mysql/#generate-your-mysql-container",
+    "relUrl": "/docs/database/mysql/#generate-your-mysql-container"
+  },"148": {
+    "doc": "Install MySQL",
+    "title": "Additional Commands",
+    "content": "You can press “Ctrl-C” to stop the container. And then you can use “docer-compose start” to start you container in the future. dockcer-compose start . After you want to stop your container. Please use below command. dockcer-compose stop . ",
+    "url": "http://localhost:4000/docs/database/mysql/#additional-commands",
+    "relUrl": "/docs/database/mysql/#additional-commands"
+  },"149": {
+    "doc": "Install Node.js and npm",
+    "title": "Table of contents",
+    "content": ". | Resources | Section 1: Checking your version of npm and Node.js | Section 2: Using a Node installer to install Node.js and npm | Section 3: Upgrading npm . | 3.1: Upgrading on *nix (OSX, Linux, etc.) | 3.2: Upgrading on Windows | . | . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#table-of-contents",
+    "relUrl": "/docs/environment/nodejs/#table-of-contents"
+  },"150": {
+    "doc": "Install Node.js and npm",
+    "title": "Resources",
+    "content": ". | Downloading and installing Node.js and npm - https://docs.npmjs.com/downloading-and-installing-node-js-and-npm | About Node.js: “As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.” - https://nodejs.org/en/about/ | Node.js on Wikipedia - https://en.wikipedia.org/wiki/Node.js | Node.js website - https://nodejs.org/ | npm Documentation - https://docs.npmjs.com/ | . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#resources",
+    "relUrl": "/docs/environment/nodejs/#resources"
+  },"151": {
+    "doc": "Install Node.js and npm",
+    "title": "Section 1: Checking your version of npm and Node.js",
+    "content": ". | To see if you already have Node.js and npm installed and to check the installed version, run the following commands in your Terminal: . $ node -v $ npm -v . If your Node.js version is lower than v8, please uninstall your previous Node.js and follow the steps in Section 2. | . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#section-1-checking-your-version-of-npm-and-nodejs",
+    "relUrl": "/docs/environment/nodejs/#section-1-checking-your-version-of-npm-and-nodejs"
+  },"152": {
+    "doc": "Install Node.js and npm",
+    "title": "Section 2: Using a Node installer to install Node.js and npm",
+    "content": ". | This tutorial explains how to install Node.js and npm through the installer. If you want to install through the package manager, please refer to this tutorial. If you want/need to install multiple versions of Node.js and npm on your computer, do your own research on how to install and use Node Version Manager (nvm). | If you’re using macOS or Windows, use one of the installers from the Node.js download page. Open https://nodejs.org/en/download/ then download the latest version of the Node.js installable archive file. Be sure to install the version labeled long-term support (LTS). (As of Sep 22, 2021, the latest Node.js LTS version is 14.17.6 which includes npm 6.14.15) . | Install Node.js . ↑Windows, ↓macOS . | Please re-execute Section 1 to verify the installation was successful. | . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#section-2-using-a-node-installer-to-install-nodejs-and-npm",
+    "relUrl": "/docs/environment/nodejs/#section-2-using-a-node-installer-to-install-nodejs-and-npm"
+  },"153": {
+    "doc": "Install Node.js and npm",
+    "title": "Section 3: Upgrading npm",
+    "content": "Since the npm that comes with the Node.js installation package is not necessarily the latest, please update npm manually. ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#section-3-upgrading-npm",
+    "relUrl": "/docs/environment/nodejs/#section-3-upgrading-npm"
+  },"154": {
+    "doc": "Install Node.js and npm",
+    "title": "3.1: Upgrading on *nix (OSX, Linux, etc.)",
+    "content": "(You may need to prefix these commands with sudo, especially on Linux, or OS X if you installed Node using its default installer.) . You can upgrade to the latest version of npm using: . $ npm install -g npm@latest . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#31-upgrading-on-nix-osx-linux-etc",
+    "relUrl": "/docs/environment/nodejs/#31-upgrading-on-nix-osx-linux-etc"
+  },"155": {
+    "doc": "Install Node.js and npm",
+    "title": "3.2: Upgrading on Windows",
+    "content": ". | First, ensure that you can execute scripts on your system by running the following command from an elevated PowerShell. To run PowerShell as Administrator, click Start, search for PowerShell, right-click PowerShell and select Run as Administrator. $ Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force . | Then, to install and use this upgrader tool, run the following command (also from an elevated PowerShell or cmd.exe). $ npm install --global --production npm-windows-upgrade $ npm-windows-upgrade --npm-version latest . The tool will show you a list of all the published and available versions of npm (including pre-release and beta versions). Choose the one you want to install and let it do its thing! . | For advanced usage of the tool, please read the tool’s documentation. | . ",
+    "url": "http://localhost:4000/docs/environment/nodejs/#32-upgrading-on-windows",
+    "relUrl": "/docs/environment/nodejs/#32-upgrading-on-windows"
+  },"156": {
+    "doc": "Install Node.js and npm",
+    "title": "Install Node.js and npm",
+    "content": " ",
+    "url": "http://localhost:4000/docs/environment/nodejs/",
+    "relUrl": "/docs/environment/nodejs/"
+  },"157": {
+    "doc": "Organize HOP/HOS/TT",
+    "title": "Table of contents",
+    "content": ". | How to organize your HOP/HOS/TT repository for class? | . ",
+    "url": "http://localhost:4000/docs/hoporhos/organization/#table-of-contents",
+    "relUrl": "/docs/hoporhos/organization/#table-of-contents"
+  },"158": {
+    "doc": "Organize HOP/HOS/TT",
+    "title": "How to organize your HOP/HOS/TT repository for class?",
+    "content": "We have 10 weeks every quarter. For doing homework, we will always download files or clone a repository from GitHub. A recommended file structure is included below. We will create 10 folders under the course - one for each week. For example, we will create a folder for every course by course number. Every quarter has 10 weeks, so we create 10 folders following the “ModuleXX” convention. ",
+    "url": "http://localhost:4000/docs/hoporhos/organization/#how-to-organize-your-hophostt-repository-for-class",
+    "relUrl": "/docs/hoporhos/organization/#how-to-organize-your-hophostt-repository-for-class"
+  },"159": {
+    "doc": "Organize HOP/HOS/TT",
+    "title": "Organize HOP/HOS/TT",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos/organization/",
+    "relUrl": "/docs/hoporhos/organization/"
+  },"160": {
+    "doc": "Install Python 3",
+    "title": "Table of contents",
+    "content": ". | Install Python on macOS or Windows | . ",
+    "url": "http://localhost:4000/docs/environment/python/#table-of-contents",
+    "relUrl": "/docs/environment/python/#table-of-contents"
+  },"161": {
+    "doc": "Install Python 3",
+    "title": "Install Python on macOS or Windows",
+    "content": "We will use Python 3 which is the latest Python version. If you have already installed Python 3, please skip this section. If you have Python 2 in your machine, please upgrade to Python 3. | Click the following link to visit the Python Downloads page https://www.python.org/downloads/ . Under the Downloads dropdown list, select the OS . | Click the downloading link based on the operating system you are using: . Note: While creating this document the latest version was 3.10.4. You might see an advanced version. Download the latest version. | Perform the installation process: . Click on Download Python 3.10.4 (you might see a different version). If you are using Windows, an .exe file will get downloaded. If you are using Mac, a .pkg file will get downloaded. After downloading the files, follow the instructions on your screen to install Python. | After the installation, open Visual Studio Code. Then, open the terminal from VS Code by hitting the control + ~ key. Type the following command to test your Python version: . $ python3 --version . Note: you are supposed to see the Python version (it may be slightly different from the version shown here, but it should be 3.x.x). | The Python extension is also recommended to install in VS Code. Click on View -&gt; Extension in the VS Code menu . Search Python and click the install button on the right . | . ",
+    "url": "http://localhost:4000/docs/environment/python/#install-python-on-macos-or-windows",
+    "relUrl": "/docs/environment/python/#install-python-on-macos-or-windows"
+  },"162": {
+    "doc": "Install Python 3",
+    "title": "Install Python 3",
+    "content": " ",
+    "url": "http://localhost:4000/docs/environment/python/",
+    "relUrl": "/docs/environment/python/"
+  },"163": {
+    "doc": "Install MS SQL Server",
+    "title": "Microsoft SQL Server",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/database/sql_server/#microsoft-sql-server",
+    "relUrl": "/docs/database/sql_server/#microsoft-sql-server"
+  },"164": {
+    "doc": "Install MS SQL Server",
+    "title": "Before You Start",
+    "content": ". | Version numbers may not match with the most current version at the time of writing. If given the option to choose between stable release (long-term support) or most recent, please choose the stable release rather than the beta-testing version. | This tutorial targets Windows users and macOS users. | There might be subtle discrepancies along the steps. Please use your best judgement while going through this cookbook style tutorial to complete each step. | The directory path shown in screenshots may be different from yours. | If you are not sure what to do or confused with any steps: . | Consult the resources listed below. | If you cannot solve the problem after a few tries, ask a TA for help. | . | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#before-you-start",
+    "relUrl": "/docs/database/sql_server/#before-you-start"
+  },"165": {
+    "doc": "Install MS SQL Server",
+    "title": "Learning Outcomes",
+    "content": "Students will be able to: . | Create and connect to a Microsoft SQL Server Database | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#learning-outcomes",
+    "relUrl": "/docs/database/sql_server/#learning-outcomes"
+  },"166": {
+    "doc": "Install MS SQL Server",
+    "title": "Resources",
+    "content": ". | YouTube Tutorial - https://youtu.be/DhAl4rdrzoA | Microsoft SQL Server Management Studio Download: https://www.microsoft.com/en-us/download/details.aspx?id=14630 | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#resources",
+    "relUrl": "/docs/database/sql_server/#resources"
+  },"167": {
+    "doc": "Install MS SQL Server",
+    "title": "Table of contents",
+    "content": ". | Download a SQL Server | Download a SQL Client | Connect to the Microsoft SQL Server Database | Import a sample database to Microsoft SQL Server . | AdventureWorks sample database backup copy | Install to SQL Server . | Restore backup | . | . | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#table-of-contents",
+    "relUrl": "/docs/database/sql_server/#table-of-contents"
+  },"168": {
+    "doc": "Install MS SQL Server",
+    "title": "Download a SQL Server",
+    "content": ". | Go to the Microsoft Download Center - https://www.microsoft.com/en-us/sql-server/sql-server-downloads and download the latest developer version for your machine . | Once the download is completed, run the downloaded .exe file and choose Basic for the installation type. | Continue with the installation and once the installation is complete, click Close. | To verify the SQL Server instance, click Windows + R and type services.msc, then click Ok. You should be able to see a SQL Server instance running. Make a note of the SQL Server instance that you just created. A SQL Server instance is a copy of the sqlservr.exe executable that runs as an operating system service. | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#download-a-sql-server",
+    "relUrl": "/docs/database/sql_server/#download-a-sql-server"
+  },"169": {
+    "doc": "Install MS SQL Server",
+    "title": "Download a SQL Client",
+    "content": ". | Go to the Microsoft Download Center - Microsoft SQL Server Management Studio Express page and download the latest version for your machine . | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#download-a-sql-client",
+    "relUrl": "/docs/database/sql_server/#download-a-sql-client"
+  },"170": {
+    "doc": "Install MS SQL Server",
+    "title": "Connect to the Microsoft SQL Server Database",
+    "content": ". | Once you have completed your download, install and open the program and enter the following in the dialog box: . | Server type: Select Database Engine | Hostname: Select server name as local | Authentication: Select Windows Authentication | . | Click connect and you will be connected to the database. The SQL Server management studio should appear like this: . | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#connect-to-the-microsoft-sql-server-database",
+    "relUrl": "/docs/database/sql_server/#connect-to-the-microsoft-sql-server-database"
+  },"171": {
+    "doc": "Install MS SQL Server",
+    "title": "Import a sample database to Microsoft SQL Server",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/sql_server/#import-a-sample-database-to-microsoft-sql-server",
+    "relUrl": "/docs/database/sql_server/#import-a-sample-database-to-microsoft-sql-server"
+  },"172": {
+    "doc": "Install MS SQL Server",
+    "title": "AdventureWorks sample database backup copy",
+    "content": "To get the OLTP downloads of AdventureWorks, go to this link. You can choose any. In my example, I chose the AdventureWorks2017.bak version. ",
+    "url": "http://localhost:4000/docs/database/sql_server/#adventureworks-sample-database-backup-copy",
+    "relUrl": "/docs/database/sql_server/#adventureworks-sample-database-backup-copy"
+  },"173": {
+    "doc": "Install MS SQL Server",
+    "title": "Install to SQL Server",
+    "content": "Restore backup . Follow the steps below to restore a backup of your database using SQL Server Management Studio. | Open SQL Server Management Studio and connect to the target SQL Server instance. | Right-click on the Databases node, and select Restore Database. | Select Device and click the ellipses (…) . | In the Select backup devices dialog, click Add, then navigate to the database backup in the filesystem of the server and select the backup. Click OK. | If needed, change the target location for the data and log files in the Files pane. Note that it is a best practice to place data and log files on different drives. | Click OK. This will initiate the database restore. After it completes, you will have the AdventureWorks database installed on your SQL Server instance. . | . ",
+    "url": "http://localhost:4000/docs/database/sql_server/#install-to-sql-server",
+    "relUrl": "/docs/database/sql_server/#install-to-sql-server"
+  },"174": {
+    "doc": "Install MS SQL Server",
+    "title": "Install MS SQL Server",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/sql_server/",
+    "relUrl": "/docs/database/sql_server/"
+  },"175": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Install MS SqlServer on Mac",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#install-ms-sqlserver-on-mac",
+    "relUrl": "/docs/database/sqlserver-mac/#install-ms-sqlserver-on-mac"
+  },"176": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Table of contents",
+    "content": ". | Prerequisite . | Choose A Place on your Mac | Create docker-compose.yml | Generate your SqlServer Container | Additional Commands | . | Connect to Sql Server . | Prerequisite | Open your Azure Data Studio | Click “Create a connection” | If everything goes well, you should see we connected sql server successfully. | . | . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#table-of-contents",
+    "relUrl": "/docs/database/sqlserver-mac/#table-of-contents"
+  },"177": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Prerequisite",
+    "content": ". | You’re using Mac . | You should have Docker installed (if not, please check this link to install, and get back) . | . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#prerequisite",
+    "relUrl": "/docs/database/sqlserver-mac/#prerequisite"
+  },"178": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Choose A Place on your Mac",
+    "content": "You can choose anywhere to store a docker-compose file. For example, . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#choose-a-place-on-your-mac",
+    "relUrl": "/docs/database/sqlserver-mac/#choose-a-place-on-your-mac"
+  },"179": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Create docker-compose.yml",
+    "content": "Type or copy the following code into it. Please take care of the indents (If you encounter any issue of the syntax of YML, please use this Online YML Checker) to help you. [Optional] change the password to yours. version: \"3\" services: mssql: image: mcr.microsoft.com/azure-sql-edge cap_add: [ 'SYS_PTRACE' ] environment: - ACCEPT_EULA=1 - MSSQL_SA_PASSWORD=StrongPwd123 ports: - \"1433:1433\" hostname: mssql volumes: mssql-azuresql-edge-data: . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#create-docker-composeyml",
+    "relUrl": "/docs/database/sqlserver-mac/#create-docker-composeyml"
+  },"180": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Generate your SqlServer Container",
+    "content": "Open your terminal and switch to the path as same as your docker-compose.yml file. Type the following command. docker-compose up . If everything goes well, you would see a similar outputs like me. ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#generate-your-sqlserver-container",
+    "relUrl": "/docs/database/sqlserver-mac/#generate-your-sqlserver-container"
+  },"181": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Additional Commands",
+    "content": "You can press “Ctrl-C” to stop the container. And then you can use “docer-compose start” to start you container in the future. dockcer-compose start . After you want to stop your container. Please use below command. dockcer-compose stop . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#additional-commands",
+    "relUrl": "/docs/database/sqlserver-mac/#additional-commands"
+  },"182": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Connect to Sql Server",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#connect-to-sql-server",
+    "relUrl": "/docs/database/sqlserver-mac/#connect-to-sql-server"
+  },"183": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Prerequisite",
+    "content": ". | Installed Azure Data Studio . | A Running Sql Server . | . ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#prerequisite-1",
+    "relUrl": "/docs/database/sqlserver-mac/#prerequisite-1"
+  },"184": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Open your Azure Data Studio",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#open-your-azure-data-studio",
+    "relUrl": "/docs/database/sqlserver-mac/#open-your-azure-data-studio"
+  },"185": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Click “Create a connection”",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#click-create-a-connection",
+    "relUrl": "/docs/database/sqlserver-mac/#click-create-a-connection"
+  },"186": {
+    "doc": "Install SqlServer on Mac",
+    "title": "If everything goes well, you should see we connected sql server successfully.",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/#if-everything-goes-well-you-should-see-we-connected-sql-server-successfully",
+    "relUrl": "/docs/database/sqlserver-mac/#if-everything-goes-well-you-should-see-we-connected-sql-server-successfully"
+  },"187": {
+    "doc": "Install SqlServer on Mac",
+    "title": "Install SqlServer on Mac",
+    "content": " ",
+    "url": "http://localhost:4000/docs/database/sqlserver-mac/",
+    "relUrl": "/docs/database/sqlserver-mac/"
+  },"188": {
+    "doc": "Submit your work",
+    "title": "How to submit your work?",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos/submit/#how-to-submit-your-work",
+    "relUrl": "/docs/hoporhos/submit/#how-to-submit-your-work"
+  },"189": {
+    "doc": "Submit your work",
+    "title": "Table of contents",
+    "content": ". | Git Command Line . | Example | . | GitHub Desktop | . There’re 2 typical ways to submit your work to GitHub. ",
+    "url": "http://localhost:4000/docs/hoporhos/submit/#table-of-contents",
+    "relUrl": "/docs/hoporhos/submit/#table-of-contents"
+  },"190": {
+    "doc": "Submit your work",
+    "title": "Git Command Line",
+    "content": "$ cd {your_repo_path} $ git add --all $ git commit -m 'Submission for Module{0X} - {Your name}' $ git push origin main . Example . $ git add --all $ git commit -m 'Submission for Module06 - Wenzhi Xu' [main 93e1062] Submission for Module06 - Wenzhi Xu 1 file changed, 0 insertions(+), 0 deletions(-) create mode 100644 .DS_Store $ git push origin main Enumerating objects: 4, done. Counting objects: 100% (4/4), done. Delta compression using up to 8 threads Compressing objects: 100% (3/3), done. Writing objects: 100% (3/3), 591 bytes | 591.00 KiB/s, done. Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 remote: Resolving deltas: 100% (1/1), completed with 1 local object. To github.com:cityuseattle/IS440-HOP06-Fall-2021.git 91edf39..93e1062 main -&gt; main . ",
+    "url": "http://localhost:4000/docs/hoporhos/submit/#git-command-line",
+    "relUrl": "/docs/hoporhos/submit/#git-command-line"
+  },"191": {
+    "doc": "Submit your work",
+    "title": "GitHub Desktop",
+    "content": "After you finish your HOP, HOS, or TT, you can see all changes on GitHub Desktop. For example, if you finish your work on week 6 and want to submit or push it to GitHub, you can type a summary and then commit it to the main branch. So far, you have committed changes to your local branch. The remote branch has not been changed. You need to push it to remote branch so that everyone can see your work, particularly your TA. ",
+    "url": "http://localhost:4000/docs/hoporhos/submit/#github-desktop",
+    "relUrl": "/docs/hoporhos/submit/#github-desktop"
+  },"192": {
+    "doc": "Submit your work",
+    "title": "Submit your work",
+    "content": " ",
+    "url": "http://localhost:4000/docs/hoporhos/submit/",
+    "relUrl": "/docs/hoporhos/submit/"
+  },"193": {
+    "doc": "What's the Terminal?",
+    "title": "On macOS",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/terminal_and_cmd/#on-macos",
+    "relUrl": "/docs/common/terminal_and_cmd/#on-macos"
+  },"194": {
+    "doc": "What's the Terminal?",
+    "title": "On Windows 10",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/terminal_and_cmd/#on-windows-10",
+    "relUrl": "/docs/common/terminal_and_cmd/#on-windows-10"
+  },"195": {
+    "doc": "What's the Terminal?",
+    "title": "On Windows (&lt;10)",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/terminal_and_cmd/#on-windows-10-1",
+    "relUrl": "/docs/common/terminal_and_cmd/#on-windows-10-1"
+  },"196": {
+    "doc": "What's the Terminal?",
+    "title": "Resources",
+    "content": "What is a Terminal? . ",
+    "url": "http://localhost:4000/docs/common/terminal_and_cmd/#resources",
+    "relUrl": "/docs/common/terminal_and_cmd/#resources"
+  },"197": {
+    "doc": "What's the Terminal?",
+    "title": "What's the Terminal?",
+    "content": "A terminal, also known as a terminal, command line, or console, is an interactive program which allows you to type commands (lines of text which are interpreted as instructions to control your computer). Terminal programs are available built-in to all major operating systems. ",
+    "url": "http://localhost:4000/docs/common/terminal_and_cmd/",
+    "relUrl": "/docs/common/terminal_and_cmd/"
+  },"198": {
+    "doc": "Terminal Text Editor",
+    "title": "Terminal Text Editor",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/terminal_text_editor/",
+    "relUrl": "/docs/tools/terminal_text_editor/"
+  },"199": {
+    "doc": "Terminal Text Editor",
+    "title": "Table of contents",
+    "content": ". | vi / vim | nano (recommend) | emacs | . ",
+    "url": "http://localhost:4000/docs/tools/terminal_text_editor/#table-of-contents",
+    "relUrl": "/docs/tools/terminal_text_editor/#table-of-contents"
+  },"200": {
+    "doc": "Terminal Text Editor",
+    "title": "vi / vim",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/terminal_text_editor/#vi--vim",
+    "relUrl": "/docs/tools/terminal_text_editor/#vi--vim"
+  },"201": {
+    "doc": "Terminal Text Editor",
+    "title": "nano (recommend)",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/terminal_text_editor/#nano-recommend",
+    "relUrl": "/docs/tools/terminal_text_editor/#nano-recommend"
+  },"202": {
+    "doc": "Terminal Text Editor",
+    "title": "emacs",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/terminal_text_editor/#emacs",
+    "relUrl": "/docs/tools/terminal_text_editor/#emacs"
+  },"203": {
+    "doc": "Tools",
+    "title": "Tools",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools",
+    "relUrl": "/docs/tools"
+  },"204": {
+    "doc": "Tutorial",
+    "title": "Tutorial",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tutorial",
+    "relUrl": "/docs/tutorial"
+  },"205": {
+    "doc": "Install Ubuntu",
+    "title": "Table of contents",
+    "content": ". | Install Ubuntu on macOS (For Apple Silicon) . | Download Multipass | Install Multipass | Start and Launch an Ubuntu Instance | Enter your Ubuntu instance | More Multipass Commands | . | Install Ubuntu on Windows 10 . | 1. Install Ubuntu LTS from Microsoft Store | 2. Initialize your Ubuntu | . | Install Ubuntu on macOS and Windows (Not for Apple Silicon and Windows 10) . | What you will need | Get started . | Download Ubuntu ISO | Open your VirtualBox in your machine | Click the “New” button, and choose to install Ubuntu | Choose Memory Size | Create Hard Disk | Choose Hard Disk File Type | Choose Storage on Physical Hard Disk | Choose File Location and Size | Attach the ISO file | . | . | . Ubuntu is a complete Linux operating system, freely available with both community and professional support. This document will show you how to install Ubuntu on your machine (macOS and Windows). ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#table-of-contents",
+    "relUrl": "/docs/tools/ubuntu/#table-of-contents"
+  },"206": {
+    "doc": "Install Ubuntu",
+    "title": "Install Ubuntu on macOS (For Apple Silicon)",
+    "content": "If you’re using Apple Silicon (Check if you’re using Apple Silicon), you need to install another tool like multipass to get Ubuntu on it. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#install-ubuntu-on-macos-for-apple-silicon",
+    "relUrl": "/docs/tools/ubuntu/#install-ubuntu-on-macos-for-apple-silicon"
+  },"207": {
+    "doc": "Install Ubuntu",
+    "title": "Download Multipass",
+    "content": "Go to the Multipass download page and download the latest version of Mutipass. When this page was written, the current released version was 1.8.1. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#download-multipass",
+    "relUrl": "/docs/tools/ubuntu/#download-multipass"
+  },"208": {
+    "doc": "Install Ubuntu",
+    "title": "Install Multipass",
+    "content": ". ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#install-multipass",
+    "relUrl": "/docs/tools/ubuntu/#install-multipass"
+  },"209": {
+    "doc": "Install Ubuntu",
+    "title": "Start and Launch an Ubuntu Instance",
+    "content": "After you install multipass, you will get a multipass command in your machine. Execute the multipass launch command to start and launch a new Ubuntu instance. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#start-and-launch-an-ubuntu-instance",
+    "relUrl": "/docs/tools/ubuntu/#start-and-launch-an-ubuntu-instance"
+  },"210": {
+    "doc": "Install Ubuntu",
+    "title": "Enter your Ubuntu instance",
+    "content": "After launching a new Ubuntu instance, you can execute multipass shell {Your Instance Name} to enter Ubuntu. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#enter-your-ubuntu-instance",
+    "relUrl": "/docs/tools/ubuntu/#enter-your-ubuntu-instance"
+  },"211": {
+    "doc": "Install Ubuntu",
+    "title": "More Multipass Commands",
+    "content": "Multipass Home Page . ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#more-multipass-commands",
+    "relUrl": "/docs/tools/ubuntu/#more-multipass-commands"
+  },"212": {
+    "doc": "Install Ubuntu",
+    "title": "Install Ubuntu on Windows 10",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#install-ubuntu-on-windows-10",
+    "relUrl": "/docs/tools/ubuntu/#install-ubuntu-on-windows-10"
+  },"213": {
+    "doc": "Install Ubuntu",
+    "title": "1. Install Ubuntu LTS from Microsoft Store",
+    "content": "Open the Microsoft Store and search Ubuntu on the search bar. Some Ubuntu apps will come up. Click the latest version of Ubuntu. As of writing this page, the latest version was Ubuntu 20.04 LTS. Click the “Get” button to install it. It will take a few minutes depending on your Internet speed. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#1-install-ubuntu-lts-from-microsoft-store",
+    "relUrl": "/docs/tools/ubuntu/#1-install-ubuntu-lts-from-microsoft-store"
+  },"214": {
+    "doc": "Install Ubuntu",
+    "title": "2. Initialize your Ubuntu",
+    "content": "After installing Ubuntu on your Windows 10 device, open it. It will do some initial work for the first time. After a few minutes, enter your Ubuntu OS username and password as you wish. For example, mark or mike. If you can see a similar window like this, you have installed the Ubuntu OS successfully. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#2-initialize-your-ubuntu",
+    "relUrl": "/docs/tools/ubuntu/#2-initialize-your-ubuntu"
+  },"215": {
+    "doc": "Install Ubuntu",
+    "title": "Install Ubuntu on macOS and Windows (Not for Apple Silicon and Windows 10)",
+    "content": "If you’re using Windows 10, please see Install Ubuntu on Windows 10 . ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#install-ubuntu-on-macos-and-windows-not-for-apple-silicon-and-windows-10",
+    "relUrl": "/docs/tools/ubuntu/#install-ubuntu-on-macos-and-windows-not-for-apple-silicon-and-windows-10"
+  },"216": {
+    "doc": "Install Ubuntu",
+    "title": "What you will need",
+    "content": ". | VirtualBox (If you don’t have VirtualBox installed, please follow this link to install it.) | Internet Connection | Ubuntu ISO file | . ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#what-you-will-need",
+    "relUrl": "/docs/tools/ubuntu/#what-you-will-need"
+  },"217": {
+    "doc": "Install Ubuntu",
+    "title": "Get started",
+    "content": "Download Ubuntu ISO . Go to the Download Ubuntu Desktop page and choose to download the latest version of the Ubuntu OS image. The file will be more than 3 GB which will take a while to download. You can download it to the ~/Downloads folder or anywhere you know. We will use it later. Open your VirtualBox in your machine . Click the “New” button, and choose to install Ubuntu . | Input your Ubuntu OS name | Choose the Linux Type | Choose the Ubuntu_64 version | . Then, click “Continue”. Choose Memory Size . The memory size will influence the performance of your Ubuntu. You can just use the recommended memory size - there’s no need to change it. Then click “Continue”. Create Hard Disk . The hard disk is used for storing data inside your Ubuntu OS. Choose the “Create a virtual hard disk now” and click “Create”. Choose Hard Disk File Type . You don’t need to change this setting. Just use the defualt option “VDI (VirtualBox Disk Image)” and click “Continue”. Choose Storage on Physical Hard Disk . Use “Dynamically allocated” that will save the storage on your machine. Then click “Continue”. Choose File Location and Size . We will store all the data produced from Ubuntu to the ~/VirtualBox VMs/ directory. Just use the default path and then click “Create”. Attach the ISO file . If everything works, you should see that your Ubuntu OS has been installed. However, we still cannot boot the Ubuntu OS. We need to attach the ISO file that we downloaded before. Click the “Settings” button. Select Storage-&gt;Contorller: IDE -&gt; Empty and click that blue button. Then click “choose a disk file”. After attching the ISO file to your Ubuntu, click the “OK” button. Then go back to the VitualBox dashboard and click “Start”. If there are no other problems, you have successfully installed Ubuntu on your machine. ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/#get-started",
+    "relUrl": "/docs/tools/ubuntu/#get-started"
+  },"218": {
+    "doc": "Install Ubuntu",
+    "title": "Install Ubuntu",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/ubuntu/",
+    "relUrl": "/docs/tools/ubuntu/"
+  },"219": {
+    "doc": "Install VirtualBox",
+    "title": "Table of contents",
+    "content": ". | Install VirtualBox on macOS (No Apple Silicon Support) | Install VirtualBox on Windows | Next | . ",
+    "url": "http://localhost:4000/docs/tools/virtualbox/#table-of-contents",
+    "relUrl": "/docs/tools/virtualbox/#table-of-contents"
+  },"220": {
+    "doc": "Install VirtualBox",
+    "title": "Install VirtualBox on macOS (No Apple Silicon Support)",
+    "content": "If you’re using Apple Silicon (≥ M1), VirtualBox may not work well. You will need to find alternatives. Check if you’re using Apple Silicon . | Open the VirtualBox download page, then choose the latest version and click “OS X hosts” . | Once you get the downloaded install package, click on it and you will see the image below. Click on VirtualBox.pkg. In the next several steps, you will see some questions during the installation process. Just click “Allow”, “Continue” and “Done”. That’s it. | Open the installed VirtualBox. If you can see the image below, congrats! It installed successfully! . | To avoid VirtualBox complaining about the kernel driver in the future, i.e. the error is shown below, you must explicitly allow VirtualBox to load, in the macOS system preferences, within the first 30 minutes after VirtualBox is installed. Go to System Preferences / Security &amp; Privacy. Click “Allow” in the window that appears. This Allow button section shows up only after first 30 minutes after the installation of VirtualBox. If you have this error and don’t see the button, uninstall VirtualBox, remove its belongings (there are usually some files left) and install it once again, then check this button again. | . ",
+    "url": "http://localhost:4000/docs/tools/virtualbox/#install-virtualbox-on-macos-no-apple-silicon-support",
+    "relUrl": "/docs/tools/virtualbox/#install-virtualbox-on-macos-no-apple-silicon-support"
+  },"221": {
+    "doc": "Install VirtualBox",
+    "title": "Install VirtualBox on Windows",
+    "content": ". | Open the VirtualBox download page, then choose the latest version and click “Windows hosts” . | Once you get the downloaded install package, click on it and you will see the image below. Click on VirtualBox-xxxxx-Win.exe. In the next several steps, you will see some questions during the installation process. Click “Next”. Click “Next”. Click “Yes”. Click “Install”. After that, it may take a while, so please be patient. During the installation process it will ask for your permission. Click “Allow” or “Yes” to complete the installation. Click “Finish”. | Open the installed VirtualBox. If you can see the image below, congrats! It installed successfully! . | . ",
+    "url": "http://localhost:4000/docs/tools/virtualbox/#install-virtualbox-on-windows",
+    "relUrl": "/docs/tools/virtualbox/#install-virtualbox-on-windows"
+  },"222": {
+    "doc": "Install VirtualBox",
+    "title": "Next",
+    "content": "Now you have successfully installed VirtualBox in your machine. If you want to add any Linux distribution inside the VirtualBox like: . | Ubuntu | Kali Linux | . ",
+    "url": "http://localhost:4000/docs/tools/virtualbox/#next",
+    "relUrl": "/docs/tools/virtualbox/#next"
+  },"223": {
+    "doc": "Install VirtualBox",
+    "title": "Install VirtualBox",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/virtualbox/",
+    "relUrl": "/docs/tools/virtualbox/"
+  },"224": {
+    "doc": "Install VS Code",
+    "title": "Table of contents",
+    "content": ". | What is VS Code? | Install VS Code on macOS | Install VS Code on Windows | Resources | . ",
+    "url": "http://localhost:4000/docs/tools/vscode/#table-of-contents",
+    "relUrl": "/docs/tools/vscode/#table-of-contents"
+  },"225": {
+    "doc": "Install VS Code",
+    "title": "What is VS Code?",
+    "content": "Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running, and version control. It aims to provide the tools a developer needs for a quick code-build-debug cycle and leaves more complex workflows to fuller featured IDEs, such as the Visual Studio IDE. ",
+    "url": "http://localhost:4000/docs/tools/vscode/#what-is-vs-code",
+    "relUrl": "/docs/tools/vscode/#what-is-vs-code"
+  },"226": {
+    "doc": "Install VS Code",
+    "title": "Install VS Code on macOS",
+    "content": ". | Visit https://code.visualstudio.com/Download/ and click on the VS Code macOS version to download it. | After the downloading is done, double click to open the zip file. | You will see “Visual Studio Code.app”. Drag it to Application folder. | Now you have installed VS Code on your Mac. Find it in your launchpad. | Open this link to learn how to use VS Code. | . ",
+    "url": "http://localhost:4000/docs/tools/vscode/#install-vs-code-on-macos",
+    "relUrl": "/docs/tools/vscode/#install-vs-code-on-macos"
+  },"227": {
+    "doc": "Install VS Code",
+    "title": "Install VS Code on Windows",
+    "content": ". | Visit https://code.visualstudio.com/Download/ . | Select a correct version for your operating system and download it. For example, you can download Windows x64 for your Windows 10. (As of 1/27/2022, you can download “VSCodeUserSetup-x64-1.63.1.exe”) . | Install VS Code. | Open the link to learn how to use VS Code. | . ",
+    "url": "http://localhost:4000/docs/tools/vscode/#install-vs-code-on-windows",
+    "relUrl": "/docs/tools/vscode/#install-vs-code-on-windows"
+  },"228": {
+    "doc": "Install VS Code",
+    "title": "Resources",
+    "content": "VS Code Doc . ",
+    "url": "http://localhost:4000/docs/tools/vscode/#resources",
+    "relUrl": "/docs/tools/vscode/#resources"
+  },"229": {
+    "doc": "Install VS Code",
+    "title": "Install VS Code",
+    "content": " ",
+    "url": "http://localhost:4000/docs/tools/vscode/",
+    "relUrl": "/docs/tools/vscode/"
+  },"230": {
+    "doc": "Open Terminal in VS Code",
+    "title": "Don’t know what the Terminal is?",
+    "content": "See What’s the Terminal? . ",
+    "url": "http://localhost:4000/docs/common/vscode_terminal/#dont-know-what-the-terminal-is",
+    "relUrl": "/docs/common/vscode_terminal/#dont-know-what-the-terminal-is"
+  },"231": {
+    "doc": "Open Terminal in VS Code",
+    "title": "Open a new Terminal in VS Code",
+    "content": "No matter if you’re using macOS or Windows, find the “Terminal” option from the menu area. Click “New Terminal” to open the Terminal inside VS Code. A new Terminal has been created. ",
+    "url": "http://localhost:4000/docs/common/vscode_terminal/#open-a-new-terminal-in-vs-code",
+    "relUrl": "/docs/common/vscode_terminal/#open-a-new-terminal-in-vs-code"
+  },"232": {
+    "doc": "Open Terminal in VS Code",
+    "title": "Open Terminal in VS Code",
+    "content": " ",
+    "url": "http://localhost:4000/docs/common/vscode_terminal/",
+    "relUrl": "/docs/common/vscode_terminal/"
+  }
+}

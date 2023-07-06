@@ -1,0 +1,41 @@
+
+<script>
+jtd.onReady(function () {
+  var backToTopBtn = document.getElementById("back-to-top");
+  if (!backToTopBtn) return;
+  var header = document.getElementsByClassName("site-header")[0];
+  var headerHeight = header? parseInt(window.getComputedStyle(header).height): 60;
+  var top = document.getElementById("top");
+  function getTopDistance() {
+    var x1 = 0, y1 = 0,
+        x2 = 0, y2 = 0,
+        x3 = 0, y3 = 0,
+        x4 = window.scrollX || 0,
+        y4 = window.scrollY || 0;
+    if (document.documentElement) {
+      x1 = document.documentElement.scrollLeft || 0;
+      y1 = document.documentElement.scrollTop || 0;
+    }
+    if (document.body) {
+      x2 = document.body.scrollLeft || 0;
+      y2 = document.body.scrollTop || 0;
+    }
+    if (top) {
+      x3 = top.scrollLeft || 0;
+      y3 = top.scrollTop || 0;
+    }
+    return {
+      x: Math.max(x1, x2, x3, x4),
+      y: Math.max(y1, y2, y3, y4)
+    };
+  }
+  function atTheTop() {
+    var dis = getTopDistance();
+    return dis.x <= headerHeight * 2 && dis.y <= 0;
+  }
+  backToTopBtn.style.display = atTheTop()? "none": "";
+  window.addEventListener("scroll", function () {
+    var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    backToTopBtn.style.display = scrollTop > 100? "block": "none";
+  });
+});</script>
