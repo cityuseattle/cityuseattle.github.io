@@ -29,4 +29,4 @@ This in some ways is the most generically convenient solution, as anything with 
 
 Granted, it's not expensive to get a somewhat more powerful solution, but if you don't remember to stop your instances when you use them then costs can quickly accumulate. (A strength of AWS in general is that you will onlny be charged on-demand when the resource is actually being used. But it's up to you to sofficially stop using the resource.) The more powerful an instance, the more charges can pile up. For now, the school doesn't offer an internal solution ot this, so you must pick a potentially paid-for instance or suffer the performance hit.
 
-We will have a setup guide to getting a Windows instance of AWS EC2 running uploaded within the next few weeks.
+We have a setup guide to getting a Windows instance of AWS EC2 running uploaded [here](https://cityuseattle.github.io/docs/tools/aws_ec2_win/).
