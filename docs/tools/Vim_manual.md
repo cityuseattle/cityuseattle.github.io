@@ -1,28 +1,21 @@
-# VIM User Manual
+---
+layout: default
+title: VIM User Manual
+parent: Tools
+---
 
-## Table of Contents
 
-- [VIM User Manual](#vim-user-manual)
-	- [Table of Contents](#table-of-contents)
-	- [Further Resources](#further-resources)
-	- [Introduction](#introduction)
-	- [Installation](#installation)
-	- [Modes](#modes)
-	- [Basic Commands](#basic-commands)
-	- [Advanced Commands](#advanced-commands)
-	- [Configuring VIM](#configuring-vim)
-	- [Plugins](#plugins)
-	- [Tips and Tricks](#tips-and-tricks)
-	- [Troubleshooting](#troubleshooting)
+## Table of contents
+{: .no_toc .text-delta }
 
 ## Further Resources
 
-[R1] - Vim Website \
-[R2] - Vim Wiki \
-[R3] - Adventures \
-[R4] - Casts \
-[R5] - Cheat Sheet \
-[R6] - Reddit
+- [Vim Website][R1]
+- [Vim Wiki][R2]
+- [Adventures][R3]
+- [Casts][R4]
+- [Cheat Sheet][R5]
+- [Reddit][R6]
 
 ---
 
@@ -52,31 +45,32 @@ VIM operates in several modes, primarily:
 
 ## Basic Commands
 
-|CMD|Purpose|
-|---|---|
-|`i:` |Enter Insert mode before the current cursor position|
-|`a:` |Enter Insert mode after the current cursor position|
-|`v:` |Enter Visual mode to select text|
-|`::` |Enter Command-line mode|
-|`Esc:`| Return to Normal mode|
-|`:w:` |Save changes (write to disk)|
-|`:q:` |Quit VIM (will not quit if there are unsaved changes)|
-|`:wq` |or `:x:` Save changes and quit VIM|
-|`:q!:`| Quit VIM without saving changes (force quit)|
+| CMD    | Purpose                                               |
+| ------ | ----------------------------------------------------- |
+| `i:`   | Enter Insert mode before the current cursor position  |
+| `a:`   | Enter Insert mode after the current cursor position   |
+| `v:`   | Enter Visual mode to select text                      |
+| `::`   | Enter Command-line mode                               |
+| `Esc:` | Return to Normal mode                                 |
+| `:w:`  | Save changes (write to disk)                          |
+| `:q:`  | Quit VIM (will not quit if there are unsaved changes) |
+| `:wq`  | Save changes and quit VIM                             |
+| `:x:`  | Save changes and quit VIM                             |
+| `:q!:` | Quit VIM without saving changes (force quit)          |
 
 ## Advanced Commands
 
-|Cmd|Purpose|
-|---|---|
-|`u:`|Undo last change|
-|`Ctrl+r:`|Redo last undone change|
-|`yy:`|Yank (copy) the current line|
-|`dd:`|Delete the current line|
-|`p:`|Put (paste) the yanked or deleted text after the cursor|
-|`P:`|Put (paste) the yanked or deleted text before the cursor|
-|`/pattern:`| Search for a pattern in the text|
-|`n:`|Repeat the last search (find next occurrence)|
-|`N:`|Repeat the last search in the opposite direction|
+| Cmd         | Purpose                                                  |
+| ----------- | -------------------------------------------------------- |
+| `u:`        | Undo last change                                         |
+| `Ctrl+r:`   | Redo last undone change                                  |
+| `yy:`       | Yank (copy) the current line                             |
+| `dd:`       | Delete the current line                                  |
+| `p:`        | Put (paste) the yanked or deleted text after the cursor  |
+| `P:`        | Put (paste) the yanked or deleted text before the cursor |
+| `/pattern:` | Search for a pattern in the text                         |
+| `n:`        | Repeat the last search (find next occurrence)            |
+| `N:`        | Repeat the last search in the opposite direction         |
 
 ## Configuring VIM
 
@@ -84,12 +78,12 @@ To customize VIM, create a `.vimrc` file in your home directory. \
 This file contains VIM commands and settings that are executed when VIM starts. \
 Some common customizations include:
 
-|Customization|CMD|
-|---|---|
-|**Enable syntax highlighting**|`syntax on`|
-|**Set tabs to spaces**|`set expandtab`|
-|**Set tab width**|`set tabstop=4`|
-|**Enable line numbers**|`set number`|
+| Customization                  | CMD             |
+| ------------------------------ | --------------- |
+| **Enable syntax highlighting** | `syntax on`     |
+| **Set tabs to spaces**         | `set expandtab` |
+| **Set tab width**              | `set tabstop=4` |
+| **Enable line numbers**        | `set number`    |
 
 ## Plugins
 
@@ -118,3 +112,4 @@ Search for or ask questions on forums, such as Stack Overflow
 [R4]: <http://vimcasts.org/> "Vim Casts - screencasts about VIM features and plugins"
 [R5]: <https://vim.rtorr.com/> "VIM Cheat Sheet - a quick reference for VIM commands"
 [R6]: <https://www.reddit.com/r/vim/> "VIM Reddit community"
+[vim-reddit]: <https://styles.redditmedia.com/t5_2qhqx/styles/communityIcon_9lpgb9pf6xh01.png?width=256&v=enabled&s=26d4079e8b7f5aac6e06c97b5b77960ab9cf31eb> "Icon for VIM"
