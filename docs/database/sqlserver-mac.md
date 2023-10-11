@@ -26,8 +26,7 @@ parent: Database
 You can choose anywhere to store a docker-compose file. For example, 
 Go to terminal in MAC and then run below commands:
 1. mkdir sqlserver   --- this creates sqlserver folder
-2. nano docker-compose.yml
-   Above command opens the docker-compose.yml copy the code from Create docker-compose.yml which is located below.
+2. nano docker-compose.yml  .This command opens the docker-compose.yml copy the code from Create docker-compose.yml which is located below.
 3.  Saving the docker-compose.yml
     To save the file, press Control-O.
     At the filename prompt, press Enter.
