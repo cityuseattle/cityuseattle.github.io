@@ -120,6 +120,8 @@ dockcer-compose stop
 
 **Database restoration on SQL Server:**
 Download AdventureWorks2017.bak database backup file from https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
+
+
 **Copying the AdventureWorks2017.bak backup file from MAC downloads folder to docker container**
 1. Go to MAC terminal then type **docker ps** . Here containerID will get displayed.
 2. docker cp ~/Downloads/AdventureWorks2017.bak **CONTAINER_NAME**:/var/opt/mssql/data/AdventureWorks2017.bak
