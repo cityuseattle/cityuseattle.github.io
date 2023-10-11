@@ -118,5 +118,22 @@ dockcer-compose stop
 ![](/assets/images/database/sqlserver-mac/sqlserver-mac-7.png)
 
 
-
+**Database restoration on SQL Server:**
+Download AdventureWorks2017.bak database backup file from https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
+**Copying the AdventureWorks2017.bak backup file from MAC downloads folder to docker container**
+1. Go to MAC terminal then type **docker ps** . Here containerID will get displayed.
+2. docker cp ~/Downloads/AdventureWorks2017.bak **CONTAINER_NAME**:/var/opt/mssql/data/AdventureWorks2017.bak
+3. Replace the CONTAINER_NAME in step2 with containerID displayed in step1.
+    Example: docker cp ~/Downloads/AdventureWorks2017.bak 38974d1:/var/opt/mssql/data/AdventureWorks2017.bak
+4. Once completion of copying backup file from MAC to container.
+5. Go to Azure Data Studio then create a new query , make sure you have enabled preview features in Azure Data Studio to get new query option.
+6. Run below database restore command.
+7. RESTORE DATABASE AdventureWorks2017
+FROM DISK = '/var/opt/mssql/data/AdventureWorks2017.bak'
+WITH 
+    MOVE 'AdventureWorks2017' TO '/var/opt/mssql/data/AdventureWorks2017.mdf',
+    MOVE 'AdventureWorks2017_Log' TO '/var/opt/mssql/data/AdventureWorks2017.ldf',
+    STATS = 5; -- Display progress every 5 percent
+8. You have successfully restored the database AdventureWorks2017. 
+   
 
