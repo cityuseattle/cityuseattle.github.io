@@ -119,7 +119,7 @@ dockcer-compose stop
 
 
 **Database restoration on SQL Server:**
-Download AdventureWorks2017.bak database backup file from https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
+Download AdventureWorks2017.bak database backup file from ![](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)
 
 
       
@@ -141,5 +141,5 @@ WITH
    
 
 
-**SQL Server installation video on MAC:** https://cityuseattle.github.io/docs/database/sqlserver-mac/
+**SQL Server installation video on MAC:** ![](https://cityuseattle.github.io/docs/database/sqlserver-mac/)
 
