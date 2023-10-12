@@ -140,3 +140,6 @@ WITH
 8. You have successfully restored the database AdventureWorks2017. 
    
 
+
+**SQL Server installation video on MAC:** https://cityuseattle.github.io/docs/database/sqlserver-mac/
+
