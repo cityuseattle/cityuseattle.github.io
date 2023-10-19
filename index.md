@@ -2,16 +2,16 @@
 layout: default
 title: Home
 nav_order: 1
-description: "CityU STC TA Center"
+description: "CityU STC Student Worker Center"
 permalink: /
 ---
 
-# CityU STC TA Center
+# CityU STC Student Worker Center
 {: .fs-9 }
 
 ### Get Started
 
-Welcome to the CityU STC TA Center. We're here to share technical knowledge and help solve your problems quickly. In addition, we hope you learn something from here as well.
+Welcome to the CityU STC Student Worker Center. We're here to share technical knowledge and help solve your problems quickly. In addition, we hope you learn something from here as well.
 
 This website is hosted on GitHub Pages and is open to anyone - not just CityU TAs. If you want to contribute or find something wrong, please read more about becoming a contributor in [our GitHub repo](https://github.com/cityuseattle/cityuseattle.github.io#contributing).
 
