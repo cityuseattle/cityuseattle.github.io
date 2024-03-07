@@ -26,7 +26,7 @@ The unique difference is the course number. I'll use 624 as an example to show y
 
 # Preparation
 
-The **first thing** you need to consider is finding a place to store your HOP, HOS or TT repositories.
+The **first thing** you need to consider is finding a place to store your HOS or TT repositories.
 
 There is a [recommend way]({{ site.baseurl }}{% link docs/hoporhos/organization.md %}) to organize your 10 weeks of course content. Please take a look at the guide and create the necessary folders for the course.
 
