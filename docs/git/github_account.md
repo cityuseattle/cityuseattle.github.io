@@ -16,7 +16,7 @@ nav_order: 1
 
     ![registration_process](/assets/images/git/github_account/registration_process.png)
     
- 4. Verify your account. It will take 2 steps:
+ 3. Verify your account. It will take 2 steps:
     
    Step 1:
    
@@ -26,16 +26,16 @@ nav_order: 1
    
    ![registration_process_step3](/assets/images/git/github_account/registration_process_step3.png)
 
- 5. After verifying, you will be asked to personalize your account. You can select Skip personalization.
+ 4. After verifying, you will be asked to personalize your account. You can select Skip personalization.
     
     ![github_welcome_page](/assets/images/git/github_account/github_welcome_page.png)
 
- 7. Then you will be redirected to the initial dashboard page.
+ 5. Then you will be redirected to the initial dashboard page.
 
     ![initial_dashboard_page](/assets/images/git/github_account/initial_dashboard_page.png)
 
- 8. At this point you have created your GitHub account.
+ 6. At this point you have created your GitHub account.
 
- 9. Please email your username to your Student Worker if requested. You can access it on the top right corner.
+ 7. Please email your username to your Student Worker if requested. You can access it on the top right corner.
     
     ![account_dropdown_box](/assets/images/git/github_account/account_dropdown_box.png)
