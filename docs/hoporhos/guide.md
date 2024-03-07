@@ -1,7 +1,7 @@
 ---
 layout: default
-title: A Guide for HOP/HOS/TT
-parent: HOP, HOS and TT
+title: A Guide for HOS/TT
+parent: HOS and TT
 nav_order: 2
 ---
 
