@@ -17,9 +17,8 @@ nav_order: 2
 ---
 
 
-This guide is for any courses' HOP (Hands-On Practice), HOS (Hands-On Skill) or TT (Technology Tool) assignments that are on GitHub.
+This guide is for any courses' HOS (Hands-On Skill) or TT (Technology Tool) assignments that are on GitHub.
 
-* **HOP**: For undergraduates
 * **HOS**: For graduates
 * **TT**: For doctorates
 
@@ -43,17 +42,17 @@ In your local machine, open the Terminal (for Mac) or Command Prompt (CMD for Wi
 
 **Don't have Git command?** Please follow [Install Git Command]({{ site.baseurl }}{% link docs/git/install.md %}) to install it.
 
-* `cd {Your course path}/624/Module01` (Assume you're doing the 1st week's HOP, HOS or TT. cd Module02 if you're doing the 2nd week's assignment.)
+* `cd {Your course path}/624/Module01` (Assume you're doing the 1st week's HOS or TT. cd Module02 if you're doing the 2nd week's assignment.)
 
   ![HOP and HOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-sample.png)
 
 * `git clone [URL]` (to download this GitHub repository to your local machine, **replace `[URL]` with the actual url of your repository**. Use the copy icon to copy the repository `[URL]`.
 
-  ![HOP and HOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-clone.png)
+  ![HOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-clone.png)
 
 * `cd {repository name}` (Your repository name will be different from mine, you need to replace `{repository name}` with the actual repository name you just downloaded.)
 
-  ![HOP and HOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-cd.png)
+  ![ddHOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-cd.png)
 
 ## GitHub Desktop
 
