@@ -133,7 +133,7 @@ nav_order: 2
 
  8. Uncheck "View Release Notes" because we do not need it.
 
-    ![install_completing](/assets/images/git/install/install_completing.png)
+    ![Git Installation complete for Windows](/assets/images/git/install/Installation_Complete.PNG)
 
 ## Section 2: Testing the Git installation
 
