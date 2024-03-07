@@ -26,7 +26,7 @@ nav_order: 2
     ```shell
     $ git --version
     ```
- ![Github_mac_oc_version_check](/assets/images/git/install/git-mac-version-check.png)
+ ![Github_mac_oc_version_check](/assets/images/git/install/git-version-check-mac-os.png)
 
  3. If you got an error and Git is not recognized by your machine, then follow [Section 2](#section-2-using-brew-package-manager-to-install-git) to install it.
 
