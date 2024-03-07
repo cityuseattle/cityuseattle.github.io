@@ -5,7 +5,7 @@ parent: HOS and TT
 nav_order: 2
 ---
 
-# A Guide for HOP, HOS or TT
+# A Guide for HOS or TT
 {: .no_toc }
 
 ## Table of contents
@@ -19,7 +19,7 @@ nav_order: 2
 
 This guide is for any courses' HOS (Hands-On Skill) or TT (Technology Tool) assignments that are on GitHub.
 
-* **HOS**: For graduates
+* **HOS**: For graduates and undergrads
 * **TT**: For doctorates
 
 The unique difference is the course number. I'll use 624 as an example to show you how to do your HOP, HOS or TT (**please remember to use your correct course number instead of 624**).
@@ -32,19 +32,19 @@ There is a [recommend way]({{ site.baseurl }}{% link docs/hoporhos/organization.
 
 # Clone or Download
 
-In this part, you have 2 ways to clone a GitHub repository to your local machine. The first one is `Git Command Line` and the other is `GitHub Desktop`. You can choose whichever one you're comfortable with.
+In this part, you have two ways to clone a GitHub repository to your local machine: `Git Command Line` and `GitHub Desktop`. You can choose whichever one you're comfortable with.
 
 **Notice: If you have no experience with Git or GitHub, GitHub Desktop would be a better choice.**
 
 ## Git Command Line
 
-In your local machine, open the Terminal (for Mac) or Command Prompt (CMD for Windows). Type the following commands to clone the repository (download the repository to your local machine):
+Open the Terminal (for Mac) or Command Prompt (CMD for Windows) in your local machine. Type the following commands to clone the repository (download the repository to your local machine):
 
 **Don't have Git command?** Please follow [Install Git Command]({{ site.baseurl }}{% link docs/git/install.md %}) to install it.
 
 * `cd {Your course path}/624/Module01` (Assume you're doing the 1st week's HOS or TT. cd Module02 if you're doing the 2nd week's assignment.)
 
-  ![HOP and HOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-sample.png)
+  ![HOP andHOS organized sturcture](/assets/images/hoporhos/guide/hos-readme-sample.png)
 
 * `git clone [URL]` (to download this GitHub repository to your local machine, **replace `[URL]` with the actual url of your repository**. Use the copy icon to copy the repository `[URL]`.
 
