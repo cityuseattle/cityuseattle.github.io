@@ -20,14 +20,14 @@ nav_order: 1
     
    Step 1:
    
-    ![registration_process_step2](/assets/images/git/github_account/registration_process_step2.png)
+   ![registration_process_step2](/assets/images/git/github_account/registration_process_step2.png)
     
    Step 2:
    
-    ![registration_process_step3](/assets/images/git/github_account/registration_process_step3.png)
+   ![registration_process_step3](/assets/images/git/github_account/registration_process_step3.png)
 
  5. After verifying, you will be asked to personalize your account. You can select Skip personalization.
- 6. 
+    
     ![github_welcome_page](/assets/images/git/github_account/github_welcome_page.png)
 
  7. Then you will be redirected to the initial dashboard page.
