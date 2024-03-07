@@ -5,7 +5,7 @@ parent: HOS and TT
 nav_order: 2
 ---
 
-# A Guide for HOS or TT
+# A Guide for HOS and TT
 {: .no_toc }
 
 ## Table of contents
