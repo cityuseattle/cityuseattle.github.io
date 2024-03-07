@@ -26,10 +26,9 @@ nav_order: 2
     ```shell
     $ git --version
     ```
+    <img width="532" alt="Screenshot 2024-03-07 at 11 13 37 AM" src="https://github.com/cityuseattle/cityuseattle.github.io/assets/24565556/cdb59848-8794-4374-9744-3a5aec101cd9">
 
-    ![git_version_output](/assets/images/git/install/git_version_output.png)
-
- 2. If you got an error and Git is not recognized by your machine, then follow [Section 2](#section-2-using-brew-package-manager-to-install-git) to install it.
+ 3. If you got an error and Git is not recognized by your machine, then follow [Section 2](#section-2-using-brew-package-manager-to-install-git) to install it.
 
 ## Section 2: Using brew package manager to install Git
 
