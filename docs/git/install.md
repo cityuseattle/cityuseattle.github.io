@@ -26,10 +26,9 @@ nav_order: 2
     ```shell
     $ git --version
     ```
+ ![Github_mac_oc_version_check](/assets/images/git/install/git-version-check-mac-os.png)
 
-    ![git_version_output](/assets/images/git/install/git_version_output.png)
-
- 2. If you got an error and Git is not recognized by your machine, then follow [Section 2](#section-2-using-brew-package-manager-to-install-git) to install it.
+ 3. If you got an error and Git is not recognized by your machine, then follow [Section 2](#section-2-using-brew-package-manager-to-install-git) to install it.
 
 ## Section 2: Using brew package manager to install Git
 
@@ -113,26 +112,26 @@ nav_order: 2
 ## Section 1: Installing Git for Windows
 
  1. Visit <https://git-scm.com/download/win> and click on the first link: "Click here to download".
+    
+![Git Install for Windows](/assets/images/git/install/WindowsVersion.PNG)
 
-    ![git_downloads_page](/assets/images/git/install/git_windows_downloads_page.png)
+ 3. Open the file that was downloaded.
 
- 2. Open the file that was downloaded.
-
- 3. Choose yes to allow the Git installation on your PC.
+ 4. Choose yes to allow the Git installation on your PC.
 
     ![user_account_control](/assets/images/git/install/user_account_control.png)
 
- 4. Go through the installation and choose the default options.
+ 5. Go through the installation and choose the default options.
 
     ![install_license](/assets/images/git/install/install_license.png)
 
- 5. For this step, we will choose the last option to give us extra commands to use.
+ 6. For this step, we will choose the last option to give us extra commands to use.
 
     ![path_env](/assets/images/git/install/path_env.png)
 
- 6. For the rest of the installation, choose the default options.
+ 7. For the rest of the installation, choose the default options.
 
- 7. Uncheck "View Release Notes" because we do not need it.
+ 8. Uncheck "View Release Notes" because we do not need it.
 
     ![install_completing](/assets/images/git/install/install_completing.png)
 
