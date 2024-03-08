@@ -141,40 +141,40 @@ Once the installation is completed, open cmd.
 
  1. In the search bar, type cmd and choose Command Prompt.
 
-    ![win_search](/assets/images/git/install/win_search.png)
+    ![search for cmd](/assets/images/git/install/cmd_search.png)
 
- 2. In the cmd window, type `git --version`. You should see Git version 2.27.0 or greater.
+ 3. In the cmd window, type `git --version`. You should see Git version 2.27.0 or greater.
 
     ![git_version_output](/assets/images/git/install/git_version_output.png)
 
- 3. ***Note: If you get the following error:***
+ 4. ***Note: If you get the following error:***
 
     ![git_path_env_error](/assets/images/git/install/git_path_env_error.png)
 
     **Then**, you need to add the PATH of Git into the Environment Variables.
 
- 4. In the cmd window, type "`where git`":
+ 5. In the cmd window, type "`where git`":
 
     ![where_git_output](/assets/images/git/install/where_git_output.png)
 
- 5. Copy the first line and add it to the environment variables.  
+ 6. Copy the first line and add it to the environment variables.  
     To open the environment variables in the search bar, type environment variables and choose "Edit the system environment variables".
 
     ![sys_path_env_editer_search](/assets/images/git/install/sys_path_env_editer_search.png)
 
- 6. Choose Environment Variables.
+ 7. Choose Environment Variables.
 
     ![sys_properties](/assets/images/git/install/sys_properties.png)
 
- 7. In the System Variables, choose Path, then select the Edit Button.
+ 8. In the System Variables, choose Path, then select the Edit Button.
 
     ![env_var_page](/assets/images/git/install/env_var_page.png)
 
- 8. Choose New, then Paste the Git location that you copied from the cmd window.
+ 9. Choose New, then Paste the Git location that you copied from the cmd window.
 
     ![add_new_path_env_var](/assets/images/git/install/add_new_path_env_var.png)
 
- 9. **Close the cmd window**, then open it one more time and type `git --version` to make sure that Git installed successfully.
+ 10. **Close the cmd window**, then open it one more time and type `git --version` to make sure that Git installed successfully.
 
 ## Section 3: First-time Git setup
 
