@@ -43,13 +43,13 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 591 bytes | 591.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:cityuseattle/IS440-HOP06-Fall-2021.git
+To github.com:cityuseattle/IS440-HOS06-Fall-2021.git
    91edf39..93e1062  main -> main
 ```
 
 ## GitHub Desktop
 
-After you finish your HOP, HOS, or TT, you can see all changes on GitHub Desktop. For example, if you finish your work on week 6 and want to submit or push it to GitHub, you can type a summary and then commit it to the main branch.
+After you finish your HOS or TT, you can see all changes on GitHub Desktop. For example, if you finish your work on week 6 and want to submit or push it to GitHub, you can type a summary and then commit it to the main branch.
 
 ![GitHub-desktop-commit](/assets/images/hoporhos/submit/github-desktop-commit.png)
 
