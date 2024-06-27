@@ -65,6 +65,12 @@ Click the “Get” button to install it. It will take a few minutes depending o
 
 After installing Ubuntu on your Windows 10 device, open it. It will do some initial work for the first time.
 
+Note: If any of the below errors occur, follow the resolution at the [bottom](#-Common-errors-of-Ubuntu-installation-on-Windows) of the page.
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu_error_1.png)
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu_error_2.png)
+
+Continuing if no errors occur:
+
 ![Ubuntu_windows10](/assets/images/tools/ubuntu/windows10_3.png)
 
 After a few minutes, enter your Ubuntu OS username and password as you wish. For example, mark or mike.
@@ -158,3 +164,20 @@ After attching the ISO file to your Ubuntu, click the "OK" button. Then go back 
 ![Ubuntu_new_9](/assets/images/tools/ubuntu/ubuntu_new_9.png)
 
 If there are no other problems, you have successfully installed Ubuntu on your machine.
+
+
+## Common errors of Ubuntu installation on Windows
+If common errors like, 'WSL has not been enabled' or 'WSL 2 requires an update' occur follow these steps:
+1. Click on windows button and search 'Turn Windows Features on or off'.
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-1.png)
+
+2. Scroll down and make sure the options 'Virtual Machine Platform' and 'Windows Subsystem for Linux' are checked.
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-2.png)
+
+3. Select OK and when prompted click 'Restart Now'.
+
+4. After the restart, open command line interface with Admin access.
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-4.png)
+
+5. Run the command 'wsl --set-default-version 2'. Restart Again.
+![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-3.png)
