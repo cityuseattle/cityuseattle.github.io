@@ -65,7 +65,7 @@ Click the “Get” button to install it. It will take a few minutes depending o
 
 After installing Ubuntu on your Windows 10 device, open it. It will do some initial work for the first time.
 
-Note: If any of the below errors occur, follow the resolution at the [bottom](#-Common-errors-of-Ubuntu-installation-on-Windows) of the page.
+Note: If any of the below errors occur, follow the resolution at the [bottom](#Common-errors-of-Ubuntu-installation-on-Windows) of the page.
 ![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu_error_1.png)
 ![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu_error_2.png)
 
@@ -168,7 +168,7 @@ If there are no other problems, you have successfully installed Ubuntu on your m
 
 ## Common errors of Ubuntu installation on Windows
 If common errors like, 'WSL has not been enabled' or 'WSL 2 requires an update' occur follow these steps:
-1. Click on windows button and search 'Turn Windows Features on or off'.
+1. Click on the Windows button and search 'Turn Windows Features on or off'.
 ![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-1.png)
 
 2. Scroll down and make sure the options 'Virtual Machine Platform' and 'Windows Subsystem for Linux' are checked.
@@ -176,7 +176,7 @@ If common errors like, 'WSL has not been enabled' or 'WSL 2 requires an update' 
 
 3. Select OK and when prompted click 'Restart Now'.
 
-4. After the restart, open command line interface with Admin access.
+4. After the restart, open the command line interface with Admin access.
 ![Ubuntu_windows10](/assets/images/tools/ubuntu/ubuntu-fix-4.png)
 
 5. Run the command 'wsl --set-default-version 2'. Restart Again.
