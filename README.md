@@ -1,4 +1,4 @@
-# CityU TA Center
+# CityU STC Student Worker Center
 
 This project was initiated by Teaching Assistants (TAs) at the City University of Seattle (CityU), School of Computing & Technology (STC).
 One of the main purposes of this project is to reduce the workload of the TAs and optimize the workflow of the TAs.
