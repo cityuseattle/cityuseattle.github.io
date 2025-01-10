@@ -22,7 +22,7 @@ _variables:
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "CityU TA Center"
+title: "CityU STC Student Worker Center"
 description: "A new way to learn fast."
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://cityuseattle.github.io" # the base hostname & protocol for your site, e.g. http://example.com

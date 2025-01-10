@@ -22,7 +22,7 @@ _variables:
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "CityU TA Center"
+title: "CityU STC Student Worker Center"
 description: "A Jekyll theme for documentation"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
@@ -93,7 +93,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "^<br/>TOP"
 
-footer_content: "Copyright &copy; 2022 CityU TA Center"
+footer_content: "Copyright &copy; 2025 CityU STC Student Worker Center"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
