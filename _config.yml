@@ -92,7 +92,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "^<br/>TOP"
 
-footer_content: "Copyright &copy; 2022 CityU TA Center"
+footer_content: "Copyright &copy; 2025 CityU STC Student Worker Center"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
