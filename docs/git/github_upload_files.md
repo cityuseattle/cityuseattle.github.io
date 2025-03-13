@@ -4,7 +4,7 @@ title: Uploading Files in GitHub
 parent: Git
 ---
 
-# Accessing GitHub Codespaces
+# Uploading Files in GitHub
 {: .no_toc }
 
 ## Table of contents
